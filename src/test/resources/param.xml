@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Main Suite">
+    <parameter name="numerator" value="10.0"/>
+        <parameter name="denominator" value="4.0"/>
+    <test name="Param Test">
+        <classes>
+            <class name="ParamTest"/>
+        </classes>
+    </test>
+</suite>
