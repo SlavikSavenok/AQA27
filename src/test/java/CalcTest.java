@@ -81,17 +81,21 @@ public class CalcTest extends BaseTest {
 
     }
 
-    @Test(groups = "smoke")        // (expectedExceptions = ArithmeticException.class)
-    public void testDivByZero() { // int решил в try/catch обернуть
-        try {
-            Assert.assertEquals(calculator.div(10, 0), 0);
-            Assert.assertEquals(calculator.div(-10, 0), 0);
+    @Test(groups = "smoke",expectedExceptions = ArithmeticException.class,priority = 2)
+    public void testDivByZeroInt() {
 
-        } catch (ArithmeticException e) {
-            System.out.println("You can’t divide by zero (but if you really want to, divide by double or float)");
-        }
+        Assert.assertEquals(calculator.div(10, 0), 0);
+        Assert.assertEquals(calculator.div(-10, 0), 0);
+        Assert.assertEquals(calculator.div(0, 0), 0);
+
+
+    }
+    @Test(groups = "smoke",priority = 1)
+    public void testDivByZeroDouble() {
+
         Assert.assertEquals(calculator.div(1.0,0),Double.POSITIVE_INFINITY);
         Assert.assertEquals(calculator.div(-1.0,0),Double.NEGATIVE_INFINITY);
+        Assert.assertEquals(calculator.div(0.0,0.0),Double.NaN);
     }
 
 
