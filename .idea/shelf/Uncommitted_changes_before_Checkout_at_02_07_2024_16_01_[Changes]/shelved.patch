@@ -1,0 +1,313 @@
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\r\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\">\r\n    <modelVersion>4.0.0</modelVersion>\r\n\r\n    <groupId>org.example</groupId>\r\n    <artifactId>AQA27</artifactId>\r\n    <version>1.0-SNAPSHOT</version>\r\n\r\n    <properties>\r\n        <maven.compiler.source>22</maven.compiler.source>\r\n        <maven.compiler.target>22</maven.compiler.target>\r\n        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>\r\n    </properties>\r\n\r\n    <dependencies>\r\n        <dependency>\r\n            <groupId>org.testng</groupId>\r\n            <artifactId>testng</artifactId>\r\n            <version>7.10.2</version>\r\n            <scope>test</scope>\r\n        </dependency>\r\n\r\n    </dependencies>\r\n\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pom.xml b/pom.xml
+--- a/pom.xml	(revision 7f7ce8eeb76ae1add61cffd804abbff87729da8a)
++++ b/pom.xml	(date 1719837032023)
+@@ -22,6 +22,18 @@
+             <scope>test</scope>
+         </dependency>
+ 
++            <dependency>
++                <groupId>org.seleniumhq.selenium</groupId>
++                <artifactId>selenium-java</artifactId>
++                <version>4.22.0</version>
++            </dependency>
++
++        <dependency>
++            <groupId>io.github.bonigarcia</groupId>
++            <artifactId>webdrivermanager</artifactId>
++            <version>5.8.0</version>
++        </dependency>
++
+     </dependencies>
+ 
+ </project>
+\ No newline at end of file
+Index: src/test/java/UnitTest.java
+===================================================================
+diff --git a/src/test/java/UnitTest.java b/src/test/java/UnitTest.java
+deleted file mode 100644
+--- a/src/test/java/UnitTest.java	(revision 7f7ce8eeb76ae1add61cffd804abbff87729da8a)
++++ /dev/null	(revision 7f7ce8eeb76ae1add61cffd804abbff87729da8a)
+@@ -1,3 +0,0 @@
+-public class UnitTest {
+-
+-}
+Index: src/main/java/servises/BrowsersService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/servises/BrowsersService.java b/src/main/java/servises/BrowsersService.java
+new file mode 100644
+--- /dev/null	(date 1719839244844)
++++ b/src/main/java/servises/BrowsersService.java	(date 1719839244844)
+@@ -0,0 +1,50 @@
++package servises;
++
++import configuration.ReadProperties;
++import io.github.bonigarcia.wdm.WebDriverManager;
++import io.github.bonigarcia.wdm.config.DriverManagerType;
++import io.github.bonigarcia.wdm.managers.OperaDriverManager;
++import org.openqa.selenium.WebDriver;
++import org.openqa.selenium.chrome.ChromeDriver;
++import org.openqa.selenium.chrome.ChromeOptions;
++import org.openqa.selenium.opera.OperaDriver;
++import org.openqa.selenium.opera.OperaOptions;
++
++public class BrowsersService {
++    private WebDriver driver = null;
++
++    public BrowsersService() {
++        switch (ReadProperties.browserName().toLowerCase()) {
++            case "chrome":
++                DriverManagerType driverManagerType = DriverManagerType.CHROME;
++                WebDriverManager.getInstance(driverManagerType).clearDriverCache().setup();
++                driver = new ChromeDriver();
++                break;
++            case "opera":
++                driverManagerType = DriverManagerType.OPERA;
++                WebDriverManager.getInstance(driverManagerType).clearDriverCache().setup();
++
++                break;
++            default:
++                System.out.println("Browser" + ReadProperties.browserName() + " not supported");
++        }
++    }
++
++    public WebDriver getDriver() {
++        return driver;
++    }
++
++    private ChromeOptions getChromeOptions() {
++        ChromeOptions options = new ChromeOptions();
++        options.addArguments("--start-maximized");
++        options.addArguments("--ignore-certificate-errors");
++        options.addArguments("--silent");
++        options.addArguments("--disable-gpu");
++
++        if (ReadProperties.isHeadless()) {
++            options.addArguments("--headless");
++        }
++        return options;
++    }
++
++}
+Index: src/test/java/tests/SmokeTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/tests/SmokeTest.java b/src/test/java/tests/SmokeTest.java
+new file mode 100644
+--- /dev/null	(date 1719840344588)
++++ b/src/test/java/tests/SmokeTest.java	(date 1719840344588)
+@@ -0,0 +1,38 @@
++package tests;
++
++import org.openqa.selenium.By;
++import org.openqa.selenium.Keys;
++import org.openqa.selenium.WebDriver;
++import org.openqa.selenium.WebElement;
++import org.testng.Assert;
++import org.testng.annotations.Test;
++import servises.BrowsersService;
++
++public class SmokeTest {
++    @Test
++    public void validateIKTCalculation() throws InterruptedException {
++        WebDriver driver = new BrowsersService().getDriver();
++        driver.get("https://clinic-cvetkov.ru/company/kalkulyator-imt/");
++
++        WebElement weight =  driver.findElement(By.name("weight"));
++        WebElement height=  driver.findElement(By.name("height"));
++        WebElement button=  driver.findElement(By.id("calc-mass-c"));
++
++        weight.sendKeys("120");
++        weight.sendKeys(Keys.TAB);
++
++        height.sendKeys("191");
++        button.click();
++
++        Thread.sleep(2000);
++
++        WebElement result= driver.findElement(By.id("imt-result"));
++
++        Assert.assertEquals(result.getText(),"32.9 - Ожирение первой степени");
++
++
++        driver.quit();
++
++
++    }
++}
+Index: src/main/java/servises/SimpleDriver.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/servises/SimpleDriver.java b/src/main/java/servises/SimpleDriver.java
+new file mode 100644
+--- /dev/null	(date 1719598528874)
++++ b/src/main/java/servises/SimpleDriver.java	(date 1719598528874)
+@@ -0,0 +1,11 @@
++package servises;
++
++import org.openqa.selenium.chrome.ChromeDriver;
++
++public class SimpleDriver {
++
++    public ChromeDriver getDriver() {
++        System.setProperty("webdriver.chrome.driver", "c:D:\\Project\\AQA27\\src\\test\\resources\\chromedriver.exe");
++        return new ChromeDriver();
++    }
++}
+Index: src/test/java/tests/FirstTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/tests/FirstTest.java b/src/test/java/tests/FirstTest.java
+new file mode 100644
+--- /dev/null	(date 1719837276879)
++++ b/src/test/java/tests/FirstTest.java	(date 1719837276879)
+@@ -0,0 +1,41 @@
++package tests;
++
++import org.openqa.selenium.WebDriver;
++import org.openqa.selenium.chrome.ChromeDriver;
++import org.testng.annotations.Test;
++import servises.AdvancedDriver;
++import servises.BrowsersService;
++import servises.SimpleDriver;
++
++import java.time.Duration;
++
++public class FirstTest {
++    @Test
++    public void simpleDriverTest() throws InterruptedException {
++        SimpleDriver simpleDriver = new SimpleDriver();
++        WebDriver driver = new ChromeDriver();
++        driver.quit();
++    }
++
++    @Test
++    public void advancedDriverTest() throws InterruptedException {
++        AdvancedDriver advancedDriver = new AdvancedDriver();
++        WebDriver driver = advancedDriver.getDriver();
++        driver.quit();
++    }
++
++    @Test
++    public void browserDriverTest() throws InterruptedException {
++        BrowsersService browsersService = new BrowsersService();
++        WebDriver driver = browsersService.getDriver();
++        System.out.println(driver.manage().window().getPosition());
++        System.out.println(driver.manage().window().getSize());
++        Thread.sleep(3000);
++        // driver.manage().window().setPosition(new Point(400,700));
++        //  driver.manage().window().setSize(new Dimension(500,500));
++        driver.manage().window().maximize();
++        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(40));
++        driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(20));
++
++    }
++}
+Index: src/main/java/servises/AdvancedDriver.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/servises/AdvancedDriver.java b/src/main/java/servises/AdvancedDriver.java
+new file mode 100644
+--- /dev/null	(date 1719836795727)
++++ b/src/main/java/servises/AdvancedDriver.java	(date 1719836795727)
+@@ -0,0 +1,20 @@
++package servises;
++
++import org.openqa.selenium.chrome.ChromeDriver;
++import org.openqa.selenium.chrome.ChromeOptions;
++
++public class AdvancedDriver {
++    public ChromeDriver getDriver() {
++        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
++        return new ChromeDriver();
++    }
++
++    public ChromeOptions getChromeOptions() {
++        ChromeOptions options = new ChromeOptions();
++        options.addArguments("--start-maximized");
++        options.addArguments("--ignore-certificate-errors");
++        options.addArguments("--silent");
++        options.addArguments("--disable-gpu");
++        return options;
++    }
++}
+Index: src/main/java/configuration/ReadProperties.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/configuration/ReadProperties.java b/src/main/java/configuration/ReadProperties.java
+new file mode 100644
+--- /dev/null	(date 1719334907952)
++++ b/src/main/java/configuration/ReadProperties.java	(date 1719334907952)
+@@ -0,0 +1,37 @@
++package configuration;
++
++import java.io.IOException;
++import java.util.Properties;
++
++public class ReadProperties {
++    private static final Properties properties;
++
++    static {
++        properties = new Properties();
++        try {
++            properties.load(ReadProperties.class.getClassLoader().getResourceAsStream("config.properties"));
++        } catch (IOException e) {
++            e.printStackTrace();
++        }
++    }
++
++    public static String getUrl() {
++        return properties.getProperty("url");
++    }
++
++    public static String browserName() {
++        return properties.getProperty("browser");
++    }
++
++    public static String username() {
++        return properties.getProperty("username");
++    }
++
++    public static String password() {
++        return properties.getProperty("password");
++    }
++
++    public static boolean isHeadless() {
++        return properties.getProperty("headless").equalsIgnoreCase("true");
++    }
++}
+\ No newline at end of file
+Index: src/test/resources/config.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/src/test/resources/config.properties b/src/test/resources/config.properties
+new file mode 100644
+--- /dev/null	(date 1719743607058)
++++ b/src/test/resources/config.properties	(date 1719743607058)
+@@ -0,0 +1,4 @@
++url=https://aqa04onl01.testrail.io/
++browser=chrome
++headless=false
++timeout=10
+\ No newline at end of file

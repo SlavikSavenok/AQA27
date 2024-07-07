@@ -1,0 +1,9 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_02_07_2024_16_01_[Changes]" date="1719925303752" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_07_2024_16_01_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 02.07.2024 16:01 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="src/test/resources/chromedriver.exe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_07_2024_16_01_[Changes]/chromedriver.exe" />
+  </binary>
+</changelist>
