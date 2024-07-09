@@ -93,8 +93,5 @@ public class TestHomeWork {
         softAssert.assertEquals(CockcroftGaultFormula.getText(), "73.18");
 
         softAssert.assertAll();
-
     }
-
-
 }
