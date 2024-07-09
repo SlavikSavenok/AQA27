@@ -35,8 +35,9 @@ public class LocatorsTest {
         // поиск по tag name
         WebElement tagNam = driver.findElement(By.tagName("noscript"));
         // поиск по link text
-        WebElement backpack = driver.findElement(By.linkText("All Items"));
+       // WebElement backpack = driver.findElement(By.linkText("Sauce Labs Bike Light"));
 
+        // WebElement ww=driver.findElement(By.partialLinkText("Twitter"));
 
 
         username.sendKeys("standard_user");
