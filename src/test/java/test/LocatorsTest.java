@@ -1,5 +1,6 @@
 package test;
 
+import configuration.ReadProperties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -35,9 +36,11 @@ public class LocatorsTest {
         // поиск по tag name
         WebElement tagNam = driver.findElement(By.tagName("noscript"));
         // поиск по link text
-       // WebElement backpack = driver.findElement(By.linkText("Sauce Labs Bike Light"));
+         WebElement backpack = driver.findElement(By.linkText("LinkedIn"));
 
+        //поиск по partial link text
         // WebElement ww=driver.findElement(By.partialLinkText("Twitter"));
+
 
 
         username.sendKeys("standard_user");
@@ -47,4 +50,5 @@ public class LocatorsTest {
 
 
     }
+
 }
