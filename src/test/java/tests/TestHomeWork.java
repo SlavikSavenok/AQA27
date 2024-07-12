@@ -94,4 +94,41 @@ public class TestHomeWork {
 
         softAssert.assertAll();
     }
+
+    @Test
+    public void validateLaminateCalculator() throws InterruptedException {
+        SoftAssert softAssert = new SoftAssert();
+        driver.get("https://calc.by/building-calculators/laminate.html");
+        Thread.sleep(3000);
+
+        WebElement roomLength = driver.findElement(By.id("ln_room_id"));
+        WebElement roomWidth = driver.findElement(By.id("wd_room_id"));
+        WebElement laminatePanelLength = driver.findElement(By.id("ln_lam_id"));
+        WebElement laminatePanelWidth = driver.findElement(By.id("wd_lam_id"));
+        WebElement laminateLayingDirection = driver.findElement(By.id("direction-laminate-id1"));
+        WebElement button = driver.findElement(By.xpath("//*[@id=\"t3-content\"]/div[3]/article/section/div[2]/div[2]/div[2]/a"));
+
+
+        roomLength.clear();
+        roomLength.sendKeys("500");
+        roomWidth.clear();
+        roomWidth.sendKeys("400");
+        laminatePanelLength.clear();
+        laminatePanelLength.sendKeys("2000");
+        laminatePanelWidth.clear();
+        laminatePanelWidth.sendKeys("200");
+        laminateLayingDirection.click();
+        button.click();
+        Thread.sleep(3000);
+
+        WebElement requiredNumberOfLLaminateBoards = driver.findElement(By.xpath("//span[@style='padding:5px 0;font-size:22px; color:#C80303; font-weight:bold;']"));
+        WebElement numberOfLaminatePackages = driver.findElement(By.xpath("//span[@style='padding:5px 0;font-size:18px; color:#0E8C19; font-weight:bold;']"));
+
+
+        softAssert.assertEquals(requiredNumberOfLLaminateBoards.getText(), "53");
+        softAssert.assertEquals(numberOfLaminatePackages.getText(), "7");
+        softAssert.assertAll();
+        Thread.sleep(3000);
+
+    }
 }
