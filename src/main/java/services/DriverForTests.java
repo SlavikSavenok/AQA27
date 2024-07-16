@@ -9,8 +9,6 @@ public class DriverForTests {
 
 
     public WebDriver getDriver() {
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-
         return new ChromeDriver(getChromeOptions());
     }
 
