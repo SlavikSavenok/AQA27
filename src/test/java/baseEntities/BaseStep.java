@@ -10,6 +10,7 @@ public class BaseStep {
     protected CartPage cartPage;
     protected CheckoutInformationPage checkoutInformationPage;
     protected OverviewPage overviewPage;
+    protected CheckoutComplete checkoutComplete;
 
     public BaseStep(WebDriver driver) {
         this.driver = driver;
@@ -17,6 +18,7 @@ public class BaseStep {
         menuPage = new MenuPage(driver);
         cartPage = new CartPage(driver);
         overviewPage = new OverviewPage(driver);
+        checkoutComplete = new CheckoutComplete(driver);
         checkoutInformationPage = new CheckoutInformationPage(driver);
     }
 }

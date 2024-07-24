@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class OverviewPage extends BasePage {
-    private final By FINISH_BUTTON_LOCATOR=By.id("finish");
+    private final By FINISH_BUTTON_LOCATOR = By.id("finish");
 
     public OverviewPage(WebDriver driver) {
         super(driver);
@@ -19,5 +19,9 @@ public class OverviewPage extends BasePage {
 
     public WebElement getFinishButton() {
         return pageDriver.findElement(FINISH_BUTTON_LOCATOR);
+    }
+
+    public void clickFinishButton() {
+        getFinishButton().click();
     }
 }

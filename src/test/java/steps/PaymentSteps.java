@@ -29,4 +29,13 @@ public class PaymentSteps extends BaseStep {
 
     }
 
+    public void successFinishPayment(){
+        overviewPage.clickFinishButton();
+    }
+
+    public void successBackHome(){
+        checkoutComplete.clickBackHome();
+    }
+
+
 }
