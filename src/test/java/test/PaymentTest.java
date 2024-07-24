@@ -10,6 +10,7 @@ public class PaymentTest extends BaseTest {
         userSteps.successLogin(ReadProperties.username(), ReadProperties.password());
         addRemoveSteps.successAddToCart();
         paymentSteps.successGoToCart();
+        paymentSteps.successGoToCheckoutInformation();
         Thread.sleep(2000);
 
 

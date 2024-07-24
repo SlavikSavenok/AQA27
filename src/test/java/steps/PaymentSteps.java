@@ -11,4 +11,8 @@ public class PaymentSteps extends BaseStep {
         menuPage.clickCart();
     }
 
+    public void successGoToCheckoutInformation(){
+        cartPage.clickCheckout();
+    }
+
 }
