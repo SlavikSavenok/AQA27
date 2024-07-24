@@ -11,6 +11,7 @@ public class PaymentTest extends BaseTest {
         addRemoveSteps.successAddToCart();
         paymentSteps.successGoToCart();
         paymentSteps.successGoToCheckoutInformation();
+        paymentSteps.successGoToOverview("Ivan","Ivanov","1111");
         Thread.sleep(2000);
 
 
