@@ -11,6 +11,7 @@ public class MenuPage extends BasePage {
     protected final By ADD_SAUCE_LABS_ONESIE = By.id("add-to-cart-sauce-labs-onesie");
     protected final By REMOVE_SAUCE_LABS_BACKPACK = By.id("remove-sauce-labs-backpack");
     protected final By REMOVE_SAUCE_LABS_ONESIE = By.id("remove-sauce-labs-onesie");
+    protected final By CART_LOCATOR = By.className("shopping_cart_link");
 
 
     public MenuPage(WebDriver driver) {
@@ -37,6 +38,10 @@ public class MenuPage extends BasePage {
         return pageDriver.findElement(REMOVE_SAUCE_LABS_ONESIE);
     }
 
+    public WebElement getCartButton() {
+        return pageDriver.findElement(CART_LOCATOR);
+    }
+
 
     public void setAddSauceLabsBackpack() {
         getAddSauceLabsBackpack().click();;
@@ -52,6 +57,11 @@ public class MenuPage extends BasePage {
     public void  setRemoveSauceLabsOnesie() {
         getRemoveSauceLabsOnesie().click();
     }
+
+    public void clickCart() {
+        getCartButton().click();
+    }
+
 
 
 }
