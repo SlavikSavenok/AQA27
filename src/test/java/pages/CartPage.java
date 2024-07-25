@@ -6,9 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class CartPage extends BasePage {
-    private final By CHECKOUT_BUTTON_LOCATOR= By.id("checkout");
-
-
+    private final By CHECKOUT_BUTTON_LOCATOR = By.id("checkout");
 
     public CartPage(WebDriver driver) {
         super(driver);
@@ -26,6 +24,4 @@ public class CartPage extends BasePage {
     public void clickCheckout() {
         getCheckoutButton().click();
     }
-
-
 }

@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class PaymentTest extends BaseTest {
+
     @Test
     public void paymentTest() throws InterruptedException {
         userSteps.successLogin(ReadProperties.username(), ReadProperties.password());
@@ -15,7 +16,5 @@ public class PaymentTest extends BaseTest {
         Assert.assertTrue(paymentSteps.successGoToOverview("Ivan", "Ivanov", "1111").isPageOpen());
         paymentSteps.successFinishPayment();
         paymentSteps.successBackHome();
-
-
     }
 }

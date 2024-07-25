@@ -6,7 +6,6 @@ import pages.MenuPage;
 
 public class UserSteps extends BaseStep {
 
-
     public UserSteps(WebDriver driver) {
         super(driver);
     }
@@ -20,6 +19,5 @@ public class UserSteps extends BaseStep {
         loginPage.setUsernameValue(username);
         loginPage.setPasswordValue(password);
         loginPage.clickLogin();
-
     }
 }

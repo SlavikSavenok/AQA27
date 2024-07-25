@@ -15,5 +15,4 @@ public abstract class BasePage {
     public boolean isPageOpen() {
         return pageDriver.findElement(getPageIdentifier()).isDisplayed();
     }
-
 }

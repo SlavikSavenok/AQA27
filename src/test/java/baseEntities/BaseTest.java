@@ -15,7 +15,6 @@ public class BaseTest {
     protected AddRemoveSteps addRemoveSteps;
     protected PaymentSteps paymentSteps;
 
-
     @BeforeMethod
     public void setup() {
         driver = new BrowsersService().getDriver();
@@ -23,8 +22,6 @@ public class BaseTest {
         addRemoveSteps = new AddRemoveSteps(driver);
         paymentSteps = new PaymentSteps(driver);
         driver.get(ReadProperties.getUrl());
-
-
     }
 
     @AfterMethod

@@ -12,7 +12,6 @@ public class LoginPage extends BasePage {
     private final By PASSWORD_INPUT_LOCATOR = By.id("password");
     private final By LOGIN_BUTTON_LOCATOR = By.id("login-button");
 
-
     public LoginPage(WebDriver driver) {
         super(driver);
     }
@@ -21,7 +20,6 @@ public class LoginPage extends BasePage {
     protected By getPageIdentifier() {
         return USERNAME_INPUT_LOCATOR;
     }
-
 
     public WebElement getUsernameInput() {
         return pageDriver.findElement(USERNAME_INPUT_LOCATOR);
@@ -35,7 +33,6 @@ public class LoginPage extends BasePage {
         return pageDriver.findElement(LOGIN_BUTTON_LOCATOR);
     }
 
-
     public void setUsernameValue(String value) {
         getUsernameInput().sendKeys(value);
     }
@@ -47,7 +44,4 @@ public class LoginPage extends BasePage {
     public void clickLogin() {
         getLoginButton().click();
     }
-
-
-
 }

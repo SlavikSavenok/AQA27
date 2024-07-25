@@ -42,7 +42,6 @@ public class MenuPage extends BasePage {
         return pageDriver.findElement(CART_LOCATOR);
     }
 
-
     public void setAddSauceLabsBackpack() {
         getAddSauceLabsBackpack().click();;
     }
@@ -61,7 +60,4 @@ public class MenuPage extends BasePage {
     public void clickCart() {
         getCartButton().click();
     }
-
-
-
 }

@@ -11,7 +11,6 @@ public class CheckoutInformationPage extends BasePage {
     private final By ZIP_FIELD_LOCATOR = By.id("postal-code");
     private final By CONTINUE_BUTTON_LOCATOR = By.id("continue");
 
-
     public CheckoutInformationPage(WebDriver driver) {
         super(driver);
     }
@@ -37,7 +36,6 @@ public class CheckoutInformationPage extends BasePage {
         return pageDriver.findElement(CONTINUE_BUTTON_LOCATOR);
     }
 
-
     public void setFirstNameValue(String value) {
         getFirstname().sendKeys(value);
     }
@@ -53,6 +51,4 @@ public class CheckoutInformationPage extends BasePage {
     public void clickContinueButton() {
         getContinueButton().click();
     }
-
-
 }

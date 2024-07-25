@@ -11,11 +11,9 @@ public class AddRemoveSteps extends BaseStep {
 
     public void successAddToCart() {
         addToCart();
-
     }
     public void successRemoveFromCart(){
         removeFromCart();
-
     }
 
     private void addToCart() {

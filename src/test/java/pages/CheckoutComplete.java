@@ -6,7 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class CheckoutComplete extends BasePage {
-    private final By BACK_HOME_LOCATOR=By.id("back-to-products");
+    private final By BACK_HOME_LOCATOR = By.id("back-to-products");
+
     public CheckoutComplete(WebDriver driver) {
         super(driver);
     }
@@ -19,8 +20,8 @@ public class CheckoutComplete extends BasePage {
     public WebElement getBackHomeButton() {
         return pageDriver.findElement(BACK_HOME_LOCATOR);
     }
-    public void clickBackHome(){
-        getBackHomeButton().click();
 
+    public void clickBackHome() {
+        getBackHomeButton().click();
     }
 }
