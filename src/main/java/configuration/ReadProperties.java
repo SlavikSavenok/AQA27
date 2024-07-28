@@ -8,6 +8,7 @@ public class ReadProperties {
 
     static {
         properties = new Properties();
+
         try {
             properties.load(ReadProperties.class.getClassLoader().getResourceAsStream("config.properties"));
         } catch (IOException e) {
@@ -15,8 +16,15 @@ public class ReadProperties {
         }
     }
 
-    public static String getUrl() {
-        return properties.getProperty("url");
+    public static String getUrlContextMenu() {
+        return properties.getProperty("urlContextMenu");
+    }
+    public static String getUrlDynamicControls() {
+        return properties.getProperty("urlDynamicControls");
+    }
+
+    public static String getUrlFileDownloader() {
+        return properties.getProperty("urlFileDownloader");
     }
 
     public static String browserName() {
@@ -33,5 +41,9 @@ public class ReadProperties {
 
     public static boolean isHeadless() {
         return properties.getProperty("headless").equalsIgnoreCase("true");
+    }
+
+    public static int timeout() {
+        return Integer.parseInt(properties.getProperty("timeout"));
     }
 }
