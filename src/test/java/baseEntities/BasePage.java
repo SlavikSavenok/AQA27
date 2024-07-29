@@ -6,10 +6,11 @@ import org.openqa.selenium.interactions.Actions;
 
 public abstract class BasePage {
     protected WebDriver pageDriver;
-    protected Actions actions =new Actions(pageDriver);
+    protected Actions actions;
 
     public BasePage(WebDriver driver) {
         this.pageDriver = driver;
+        actions = new Actions(pageDriver);
     }
 
     protected abstract By getPageIdentifier();

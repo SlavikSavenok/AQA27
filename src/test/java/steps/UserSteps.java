@@ -11,7 +11,10 @@ public class UserSteps extends BaseStep {
     }
 
     public void clickButton() {
-        clickButton();
+        clickContext();
+    }
+    private void clickContext(){
+        contextMenuPage.clickContextButton();
     }
 
 

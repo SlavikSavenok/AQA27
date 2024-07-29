@@ -9,15 +9,14 @@ import services.BrowsersService;
 import services.WaitsService;
 import steps.UserSteps;
 
-import java.time.Duration;
-
 
 public class BaseTest {
     protected WebDriver driver;
     protected WaitsService waitsService;
     protected Actions actions;
     protected ContextMenuPage contextMenuPage;
-    protected UserSteps userSteps;
+  // protected UserSteps userSteps;
+
 
 
     @BeforeMethod
@@ -25,9 +24,9 @@ public class BaseTest {
         driver = new BrowsersService().getDriver();
         waitsService = new WaitsService(driver);
         actions = new Actions(driver);
-        contextMenuPage = new ContextMenuPage(driver);
-        userSteps = new UserSteps(driver);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
+        contextMenuPage =new ContextMenuPage(driver);
+       // userSteps = new UserSteps(driver);
+
     }
 
     @AfterMethod
