@@ -9,8 +9,10 @@ public class AdvansedActionTest extends BaseTest {
     @Test
     public void contextMenuTest() throws InterruptedException {
         driver.get(ReadProperties.getUrlContextMenu());
+        userSteps.clickButton();
         Thread.sleep(2000);
     }
+
 
     @Test
     public void dynamicControlsTest() throws InterruptedException {
