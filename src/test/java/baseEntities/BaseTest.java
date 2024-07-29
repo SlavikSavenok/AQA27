@@ -7,19 +7,20 @@ import org.testng.annotations.BeforeMethod;
 import services.BrowsersService;
 import services.WaitsService;
 import steps.ContextMenuSteps;
+import steps.DynamicControlSteps;
 
 public class BaseTest {
     protected WebDriver driver;
     protected WaitsService waitsService;
-    protected Actions actions;
     protected ContextMenuSteps contextMenuSteps;
+    protected DynamicControlSteps dynamicControlSteps;
 
     @BeforeMethod
     public void setUp() {
         driver = new BrowsersService().getDriver();
         waitsService = new WaitsService(driver);
-        actions = new Actions(driver);
         contextMenuSteps = new ContextMenuSteps(driver);
+        dynamicControlSteps=new DynamicControlSteps(driver);
     }
 
     @AfterMethod
