@@ -22,7 +22,7 @@ public class ContextMenuPage extends BasePage {
     }
 
     public void clickContextButton(){
-        actions.contextClick(getContextButton());
+        actions.contextClick(getContextButton()).perform();
 
     }
 }
