@@ -4,18 +4,17 @@ import baseEntities.BaseStep;
 import org.openqa.selenium.WebDriver;
 
 
-public class UserSteps extends BaseStep {
+public class ContextMenuSteps extends BaseStep {
 
-    public UserSteps(WebDriver driver) {
+    public ContextMenuSteps(WebDriver driver) {
         super(driver);
     }
 
     public void clickButton() {
         clickContext();
     }
+
     private void clickContext(){
         contextMenuPage.clickContextButton();
     }
-
-
 }
