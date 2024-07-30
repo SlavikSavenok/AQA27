@@ -12,11 +12,6 @@ public class ContextMenuPage extends BasePage {
         super(driver);
     }
 
-    @Override
-    protected By getPageIdentifier() {
-        return RECTANGULAR_BUTTON;
-    }
-
     public WebElement getContextButton() {
         return pageDriver.findElement(RECTANGULAR_BUTTON);
     }

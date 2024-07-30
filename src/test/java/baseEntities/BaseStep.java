@@ -5,13 +5,11 @@ import org.openqa.selenium.interactions.Actions;
 import pages.ContextMenuPage;
 import pages.DynamicControlPage;
 
-
 public class BaseStep {
     protected WebDriver driver;
     protected ContextMenuPage contextMenuPage;
     protected Actions actions;
     protected DynamicControlPage dynamicControlPage;
-
 
     public BaseStep(WebDriver driver) {
         this.driver = driver;

@@ -19,12 +19,13 @@ public class ReadProperties {
     public static String getUrlContextMenu() {
         return properties.getProperty("urlContextMenu");
     }
+
     public static String getUrlDynamicControls() {
         return properties.getProperty("urlDynamicControls");
     }
 
-    public static String getUrlFileDownloader() {
-        return properties.getProperty("urlFileDownloader");
+    public static String getUrlFileUpload() {
+        return properties.getProperty("urlFileUpload");
     }
 
     public static String browserName() {

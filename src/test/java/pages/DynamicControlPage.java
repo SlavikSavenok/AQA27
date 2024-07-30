@@ -13,11 +13,6 @@ public class DynamicControlPage extends BasePage {
         super(driver);
     }
 
-    @Override
-    protected By getPageIdentifier() {
-        return REMOVE_BUTTON_LOCATOR;
-    }
-
     public WebElement getRemoveButton() {
         return pageDriver.findElement(REMOVE_BUTTON_LOCATOR);
     }
@@ -33,5 +28,4 @@ public class DynamicControlPage extends BasePage {
     public void clickEnableButton() {
         getEnableButton().click();
     }
-
 }
