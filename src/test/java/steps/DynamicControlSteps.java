@@ -16,4 +16,12 @@ public class DynamicControlSteps extends BaseStep {
     private void clickRemoveButton(){
         dynamicControlPage.clickRemoveButton();
     }
+
+    public void clickEnable() {
+        clickEnableButton();
+    }
+
+    private void clickEnableButton(){
+        dynamicControlPage.clickEnableButton();
+    }
 }

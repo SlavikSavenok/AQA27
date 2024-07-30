@@ -1,7 +1,6 @@
 package baseEntities;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import services.BrowsersService;
@@ -20,7 +19,7 @@ public class BaseTest {
         driver = new BrowsersService().getDriver();
         waitsService = new WaitsService(driver);
         contextMenuSteps = new ContextMenuSteps(driver);
-        dynamicControlSteps=new DynamicControlSteps(driver);
+        dynamicControlSteps = new DynamicControlSteps(driver);
     }
 
     @AfterMethod
