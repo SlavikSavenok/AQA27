@@ -30,5 +30,6 @@ public class LoginTest extends BaseTest {
     @Severity(SeverityLevel.CRITICAL)
     public void loginTestProblemUser(){
         Assert.assertTrue(userSteps.successLogin("problem_user", ReadProperties.password()).isPageOpen());
+        Assert.assertTrue(false);
     }
 }
