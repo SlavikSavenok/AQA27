@@ -2,13 +2,18 @@ package test;
 
 import baseEntities.BaseTest;
 import configuration.ReadProperties;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class PaymentTest extends BaseTest {
 
-    @Test
-    public void paymentTest() throws InterruptedException {
+    @Test(description = "Тест на оплату товара")
+    @Description("Тест проверяет корректность оплаты товара из корзины")
+    @Severity(SeverityLevel.CRITICAL)
+    public void paymentTest() {
         userSteps.successLogin(ReadProperties.username(), ReadProperties.password());
         addRemoveSteps.successAddToCart();
         paymentSteps.successGoToCart();

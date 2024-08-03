@@ -10,10 +10,12 @@ public class AddRemoveSteps extends BaseStep {
         super(driver);
     }
 
+    @Step(value = "Успешное добовление товарв в корзину")
     public void successAddToCart() {
         addToCart();
     }
 
+    @Step(value = "Успешое удоление товара из корзины")
     public void successRemoveFromCart() {
         removeFromCart();
     }

@@ -12,21 +12,21 @@ import org.testng.annotations.Test;
 public class LoginTest extends BaseTest {
 
     @Test(description = "Тест на проверку логина")
-    @Description("Тест на вход под логином StandardUser")
+    @Description("Тест проверяет вход под логином StandardUser")
     @Severity(SeverityLevel.CRITICAL)
     public void loginTestStandardUser(){
         Assert.assertTrue(userSteps.successLogin(ReadProperties.username(), ReadProperties.password()).isPageOpen());
     }
 
     @Test(description = "Тест на проверку логина")
-    @Description("Тест на вход под логином VisualUser")
+    @Description("Тест проверяет вход под логином VisualUser")
     @Severity(SeverityLevel.CRITICAL)
     public void loginTestVisualUser(){
         Assert.assertTrue(userSteps.successLogin("visual_user", ReadProperties.password()).isPageOpen());
     }
 
     @Test(description = "Тест на проверку логина")
-    @Description("Тест на вход под логином ProblemUser")
+    @Description("Тест проверяет вход под логином ProblemUser")
     @Severity(SeverityLevel.CRITICAL)
     public void loginTestProblemUser(){
         Assert.assertTrue(userSteps.successLogin("problem_user", ReadProperties.password()).isPageOpen());
