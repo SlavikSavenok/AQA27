@@ -1,6 +1,7 @@
 package steps;
 
 import baseEntities.BaseStep;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
 
@@ -12,7 +13,8 @@ public class AddRemoveSteps extends BaseStep {
     public void successAddToCart() {
         addToCart();
     }
-    public void successRemoveFromCart(){
+
+    public void successRemoveFromCart() {
         removeFromCart();
     }
 
