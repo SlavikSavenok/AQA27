@@ -7,32 +7,31 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import services.BrowsersService;
-import steps.AddRemoveSteps;
-import steps.PaymentSteps;
-import steps.UserSteps;
+import services.WaitsService;
+import steps.UserStep;
 import utils.InvokedListener;
+
 
 @Listeners(InvokedListener.class)
 public class BaseTest {
     protected WebDriver driver;
-    protected UserSteps userSteps;
-    protected AddRemoveSteps addRemoveSteps;
-    protected PaymentSteps paymentSteps;
+    protected UserStep userStep;
+    protected WaitsService waitsService;
 
     @BeforeMethod
     public void setup(ITestContext iTestContext) {
         driver = new BrowsersService().getDriver();
-        userSteps = new UserSteps(driver);
-        addRemoveSteps = new AddRemoveSteps(driver);
-        paymentSteps = new PaymentSteps(driver);
-        driver.get(ReadProperties.getUrl());
-        iTestContext.setAttribute("webdriver",driver);
+        waitsService = new WaitsService(driver);
 
+        iTestContext.setAttribute("webdriver", driver);
+
+        userStep = new UserStep(driver);
+
+        driver.get(ReadProperties.getUrl());
     }
 
     @AfterMethod
-    public void tearDown() {
+    public void teardown() {
         driver.quit();
     }
 }
-

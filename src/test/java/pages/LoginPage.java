@@ -1,16 +1,18 @@
 package pages;
 
-
 import baseEntities.BasePage;
+import elements.Button;
+import elements.Input;
+import elements.UIElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class LoginPage extends BasePage {
 
-    private final By USERNAME_INPUT_LOCATOR = By.id("user-name");
+    private final By EMAIL_INPUT_LOCATOR = By.id("name");
     private final By PASSWORD_INPUT_LOCATOR = By.id("password");
-    private final By LOGIN_BUTTON_LOCATOR = By.id("login-button");
+    private final By LOGIN_BUTTON_LOCATOR = By.id("button_primary");
 
     public LoginPage(WebDriver driver) {
         super(driver);
@@ -18,27 +20,27 @@ public class LoginPage extends BasePage {
 
     @Override
     protected By getPageIdentifier() {
-        return USERNAME_INPUT_LOCATOR;
+        return LOGIN_BUTTON_LOCATOR;
     }
 
-    public WebElement getUsernameInput() {
-        return pageDriver.findElement(USERNAME_INPUT_LOCATOR);
+    public Input getEmailInput() {
+        return new Input(pageDriver, EMAIL_INPUT_LOCATOR);
     }
 
-    public WebElement getPasswordInput() {
-        return pageDriver.findElement(PASSWORD_INPUT_LOCATOR);
+    public Input getPasswordInput() {
+        return new Input(pageDriver, PASSWORD_INPUT_LOCATOR);
     }
 
-    public WebElement getLoginButton() {
-        return pageDriver.findElement(LOGIN_BUTTON_LOCATOR);
+    public Button getLoginButton() {
+        return new Button(pageDriver, LOGIN_BUTTON_LOCATOR);
     }
 
-    public void setUsernameValue(String value) {
-        getUsernameInput().sendKeys(value);
+    public void setEmailValue(String value) {
+        getEmailInput().write(value);
     }
 
     public void setPasswordValue(String value) {
-        getPasswordInput().sendKeys(value);
+        getPasswordInput().write(value);
     }
 
     public void clickLogin() {
