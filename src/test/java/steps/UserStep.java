@@ -4,6 +4,7 @@ import baseEntities.BaseStep;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import pages.DashboardPage;
+import pages.EditProjectPage;
 import pages.LoginPage;
 
 public class UserStep extends BaseStep {
@@ -22,5 +23,23 @@ public class UserStep extends BaseStep {
         loginPage.setEmailValue(username);
         loginPage.setPasswordValue(password);
         loginPage.clickLogin();
+    }
+
+    public EditProjectPage openEditProjectPage() {
+        openEditProject();
+
+        return editProjectPage;
+    }
+
+    private void openEditProject() {
+        dashboardPage.clickEdit();
+    }
+
+    public void clickCheckBox(){
+        editProjectPage.clickCheckBox();
+    }
+
+    public void removeCheckBox(){
+        editProjectPage.removeCheckBox();
     }
 }
