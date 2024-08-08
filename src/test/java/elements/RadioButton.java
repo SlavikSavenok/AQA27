@@ -13,20 +13,9 @@ public class RadioButton {
 
     public RadioButton(WebDriver driver, By by) {
         uiElementsList = new ArrayList<>();
+        for (WebElement element : driver.findElements(by)){
 
-        for (WebElement element : driver.findElements(by)) {
-            UIElement uiElement = new UIElement(driver, element);
-            uiElementsList.add(uiElement);
-            valueList.add(uiElement.getAttribute("value"));
         }
-    }
 
-    public void selectByValue(String value) {
-        int index = valueList.indexOf(value);
-        if (index >= 0) {
-            uiElementsList.get(index).click();
-        } else {
-            throw new IllegalArgumentException("Элемента с таким value не существует");
-        }
     }
 }

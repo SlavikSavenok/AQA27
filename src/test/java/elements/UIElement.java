@@ -86,7 +86,6 @@ public class UIElement implements WebElement {
 
     @Override
     public String getText() {
-        // ToDo: Как улучшить?
         return webElement.getText();
     }
 
@@ -140,10 +139,5 @@ public class UIElement implements WebElement {
 
     public UIElement getParentElement() {
         return new UIElement(driver, webElement.findElement(By.xpath("./..")));
-    }
-
-    public void сheckBoxСlick() {
-
-        webElement.click();
     }
 }
