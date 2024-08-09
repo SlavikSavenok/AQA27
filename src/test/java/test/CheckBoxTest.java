@@ -10,14 +10,13 @@ public class CheckBoxTest extends BaseTest {
     public void checkBoxTest(){
         userStep.successfulLogin(ReadProperties.username(), ReadProperties.password());
         userStep.openEditProjectPage();
-        userStep.clickCheckBox();
+        projectStep.clickCheckBox();
     }
 
     @Test
     public void removeBoxTest() {
         userStep.successfulLogin(ReadProperties.username(), ReadProperties.password());
         userStep.openEditProjectPage();
-        userStep.removeCheckBox();
+        projectStep.removeCheckBox();
     }
-
 }

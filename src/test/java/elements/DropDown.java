@@ -7,10 +7,17 @@ import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RadioButton {
-    private List<UIElement> uiElementsList;
+public class DropDown {
 
-    public RadioButton(WebDriver driver, By by) {
+    private final UIElement uiElement;
+    private UIElement actionElement;
+    private List<UIElement> uiElementsList;
+    ;
+
+    public DropDown(WebDriver driver, By by) {
+        this.uiElement = new UIElement(driver, by);
+        this.actionElement = uiElement.findUIElement(By.cssSelector("[class='chzn-single']"));
+        actionElement.click();
         uiElementsList = new ArrayList<>();
         for (WebElement element : driver.findElements(by)) {
             UIElement uiElement = new UIElement(driver, element);
@@ -19,6 +26,7 @@ public class RadioButton {
     }
 
     public void selectByIndex(int index) {
+        actionElement.click();
         if (index >= 0 && index < uiElementsList.size()) {
             uiElementsList.get(index).click();
         } else {
@@ -26,7 +34,9 @@ public class RadioButton {
         }
     }
 
+
     public void selectByValue(String value) {
+        actionElement.click();
         for (UIElement uiElement : uiElementsList) {
             if (uiElement.getAttribute("value").equals(value)) {
                 uiElement.click();
@@ -34,23 +44,5 @@ public class RadioButton {
             }
         }
         throw new IllegalArgumentException("Значение с таким value не сушествует");
-    }
-
-    public void selectByText(String text) {
-        for (UIElement uiElement : uiElementsList) {
-            UIElement parent = uiElement.getParentElement();
-            if (parent.findElements(By.tagName("strong")).size() > 0) {
-                if (parent.findElement(By.tagName("strong")).getText().equals(text)) {
-                    uiElement.click();
-                    return;
-                }
-            } else {
-                if (parent.findElement(By.tagName("p")).getText().equals(text)) {
-                    uiElement.click();
-                    return;
-                }
-            }
-        }
-        throw new IllegalArgumentException("Значение с таким текстом не сушествует");
     }
 }

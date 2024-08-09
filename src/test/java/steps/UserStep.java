@@ -1,11 +1,11 @@
 package steps;
 
 import baseEntities.BaseStep;
-import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import pages.DashboardPage;
 import pages.EditProjectPage;
-import pages.LoginPage;
+import pages.TestCasesPage;
+
 
 public class UserStep extends BaseStep {
 
@@ -35,11 +35,12 @@ public class UserStep extends BaseStep {
         dashboardPage.clickEdit();
     }
 
-    public void clickCheckBox(){
-        editProjectPage.clickCheckBox();
+    public TestCasesPage editTestCasesPage () {
+        openTestCases();
+        return testCasesPage;
     }
 
-    public void removeCheckBox(){
-        editProjectPage.removeCheckBox();
+    private void openTestCases() {
+        dashboardPage.clickTestCases();
     }
 }

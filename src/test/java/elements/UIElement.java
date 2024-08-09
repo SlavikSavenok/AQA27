@@ -4,6 +4,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import services.WaitsService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class UIElement implements WebElement {
@@ -139,5 +140,9 @@ public class UIElement implements WebElement {
 
     public UIElement getParentElement() {
         return new UIElement(driver, webElement.findElement(By.xpath("./..")));
+    }
+
+    public UIElement findUIElement(By by) {
+        return new UIElement(driver, webElement.findElement(by));
     }
 }

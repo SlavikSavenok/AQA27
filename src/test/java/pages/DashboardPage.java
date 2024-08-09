@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 
 public class DashboardPage extends BasePage {
     private final By ADD_PROJECT_BUTTON_LOCATOR = By.id("sidebar-projects-add");
+    private final By GO_TO_TESTCASES_PAGE_LOCATOR =By.cssSelector("[href='index.php?/suites/view/2']");
     public DashboardPage(WebDriver driver) {
         super(driver);
     }
@@ -22,5 +23,13 @@ public class DashboardPage extends BasePage {
 
     public void clickEdit() {
         getEditButton().click();
+    }
+
+    public Button getTestCases() {
+        return new Button(pageDriver, GO_TO_TESTCASES_PAGE_LOCATOR);
+    }
+
+    public void clickTestCases(){
+        getTestCases().click();
     }
 }
