@@ -35,11 +35,9 @@ public class ProjectStep extends BaseStep {
 
         return addTestCasePage;
     }
-    public void selectPriorityDropDownByIndex(int index){
+
+    public void selectDropDownByIndex(int index){
         addTestCasePage.getPriorityDropDown().selectByIndex(index);
     }
 
-    public void selectDropDownByValue(String value){
-        addTestCasePage.getPriorityDropDown().selectByValue(value);
-    }
 }

@@ -8,41 +8,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DropDown {
-
-    private final UIElement uiElement;
+    private UIElement uiElement;
     private UIElement actionElement;
-    private List<UIElement> uiElementsList;
-    ;
+    private UIElement optionsElement;
+    private List<UIElement> optionList = new ArrayList<>();
 
     public DropDown(WebDriver driver, By by) {
         this.uiElement = new UIElement(driver, by);
-        this.actionElement = uiElement.findUIElement(By.cssSelector("[class='chzn-single']"));
+        this.actionElement = uiElement.findUIElement(By.className("chzn-single"));
+        this.optionsElement = uiElement.findUIElement(By.cssSelector("[data-testid='compareVersionDropDwonButton']"));
+
+    }
+
+    private void openDropDown() {
         actionElement.click();
-        uiElementsList = new ArrayList<>();
-        for (WebElement element : driver.findElements(by)) {
-            UIElement uiElement = new UIElement(driver, element);
-            uiElementsList.add(uiElement);
+        for (WebElement webElement : uiElement.findUIElements(By.tagName("li"))) {
+            optionList.add((UIElement) webElement);
         }
     }
 
     public void selectByIndex(int index) {
-        actionElement.click();
-        if (index >= 0 && index < uiElementsList.size()) {
-            uiElementsList.get(index).click();
-        } else {
-            throw new IndexOutOfBoundsException("Индекс не соответствует размеру коллекции");
-        }
-    }
-
-
-    public void selectByValue(String value) {
-        actionElement.click();
-        for (UIElement uiElement : uiElementsList) {
-            if (uiElement.getAttribute("value").equals(value)) {
-                uiElement.click();
-                return;
-            }
-        }
-        throw new IllegalArgumentException("Значение с таким value не сушествует");
+        openDropDown();
+        optionList.get(index).click();
     }
 }

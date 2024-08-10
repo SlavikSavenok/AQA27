@@ -7,11 +7,11 @@ import org.testng.annotations.Test;
 public class DropDownTest extends BaseTest {
 
     @Test
-    public void dropDownTest() throws InterruptedException {
+    public void dropDownTestPriority() {
         userStep.successfulLogin(ReadProperties.username(), ReadProperties.password());
         userStep.editTestCasesPage();
         projectStep.addTestCase();
-        projectStep.selectPriorityDropDownByIndex(1);
-        Thread.sleep(3000);
+        projectStep.selectDropDownByIndex(3);
+
     }
 }
