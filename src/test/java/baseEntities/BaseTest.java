@@ -1,6 +1,7 @@
 package baseEntities;
 
 import configuration.ReadProperties;
+import models.Project;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterMethod;
@@ -21,6 +22,7 @@ public class BaseTest {
     protected WaitsService waitsService;
     protected ProjectStep projectStep;
     protected AddTestCasePage addTestCasePage;
+    protected Project project;
 
     @BeforeMethod
     public void setup(ITestContext iTestContext) {
@@ -30,6 +32,7 @@ public class BaseTest {
         userStep = new UserStep(driver);
         projectStep = new ProjectStep(driver);
         addTestCasePage = new AddTestCasePage(driver);
+        project = new Project();
         driver.get(ReadProperties.getUrl());
     }
 

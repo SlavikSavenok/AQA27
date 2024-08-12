@@ -5,16 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c3b201d-aafd-4a52-9902-66b20a6a13f9" name="Changes" comment="Wrappers_HW">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/models/Project.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/baseEntities/BaseStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseEntities/BaseStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/DashboardPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/EditProjectPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/AddProjectPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/baseEntities/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseEntities/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/AddProjectPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/AddProjectPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/steps/ProjectStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/ProjectStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/UserStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/UserStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/CheckBoxTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/DropDownTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/RadioButtonTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/ValueOfObjectTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,13 +60,15 @@
     "TestNG.RadioButtonTest.radioButtonTest.executor": "Run",
     "TestNG.RadioButtonTest.textRadioButtonTest.executor": "Run",
     "TestNG.RadioButtonTest.valueRadioButtonTest.executor": "Run",
+    "TestNG.ValueOfObjectTest.executor": "Run",
+    "TestNG.ValueOfObjectTest.successLoginTest.executor": "Run",
     "git-widget-placeholder": "Patterns__HW",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.LoginTest.successLoginTest">
+  <component name="RunManager" selected="TestNG.ValueOfObjectTest.successLoginTest">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="AQA27Onl" />
       <method v="2">
@@ -94,42 +93,6 @@
       <option name="PACKAGE_NAME" value="test" />
       <option name="MAIN_CLASS_NAME" value="test.DropDownTest" />
       <option name="METHOD_NAME" value="dropDownTestPriority" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DropDownTest.main" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AQA27Onl" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.DropDownTest" />
-      <option name="METHOD_NAME" value="main" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginTest.successLoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AQA27Onl" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.LoginTest" />
-      <option name="METHOD_NAME" value="successLoginTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -173,13 +136,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ValueOfObjectTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AQA27Onl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.ValueOfObjectTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ValueOfObjectTest.successLoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AQA27Onl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.ValueOfObjectTest" />
+      <option name="METHOD_NAME" value="successLoginTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LoginTest.successLoginTest" />
+        <item itemvalue="TestNG.ValueOfObjectTest.successLoginTest" />
+        <item itemvalue="TestNG.ValueOfObjectTest" />
         <item itemvalue="TestNG.DropDownTest.dropDownTestPriority" />
         <item itemvalue="TestNG.RadioButtonTest.valueRadioButtonTest" />
         <item itemvalue="TestNG.RadioButtonTest.textRadioButtonTest" />
-        <item itemvalue="TestNG.DropDownTest.main" />
       </list>
     </recent_temporary>
   </component>
@@ -232,7 +230,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723257764349</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="init">
+      <option name="closed" value="true" />
+      <created>1723485481149</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1723485481149</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -247,8 +253,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="init" />
     <MESSAGE value="Wrappers_HW" />
-    <option name="LAST_COMMIT_MESSAGE" value="Wrappers_HW" />
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
 </project>
