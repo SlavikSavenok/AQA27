@@ -3,7 +3,7 @@ package steps;
 import baseEntities.BaseStep;
 import org.openqa.selenium.WebDriver;
 import pages.DashboardPage;
-import pages.EditProjectPage;
+import pages.AddProjectPage;
 import pages.TestCasesPage;
 
 
@@ -25,14 +25,14 @@ public class UserStep extends BaseStep {
         loginPage.clickLogin();
     }
 
-    public EditProjectPage openEditProjectPage() {
+    public AddProjectPage openEditProjectPage() {
         openEditProject();
 
-        return editProjectPage;
+        return addProjectPage;
     }
 
     private void openEditProject() {
-        dashboardPage.clickEdit();
+        dashboardPage.clickAddButton();
     }
 
     public TestCasesPage editTestCasesPage () {

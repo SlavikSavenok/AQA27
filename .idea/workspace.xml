@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c3b201d-aafd-4a52-9902-66b20a6a13f9" name="Changes" comment="Wrappers_HW">
-      <change beforePath="$PROJECT_DIR$/src/test/java/elements/Button.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/elements/CheckBox.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/elements/DropDown.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/elements/Input.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/elements/RadioButton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/elements/UIElement.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/baseEntities/BaseStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseEntities/BaseStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/DashboardPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/EditProjectPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/AddProjectPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/ProjectStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/ProjectStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/UserStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/UserStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/CheckBoxTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/DropDownTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/RadioButtonTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +49,7 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "TestNG.CheckBoxTest.checkBoxTest.executor": "Run",
     "TestNG.CheckBoxTest.executor": "Run",
     "TestNG.CheckBoxTest.removeBoxTest.executor": "Run",
@@ -64,20 +69,16 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.DropDownTest.dropDownTestPriority">
-    <configuration name="DropDownTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.LoginTest.successLoginTest">
+    <configuration default="true" type="JetRunConfigurationType">
       <module name="AQA27Onl" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.DropDownTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="AQA27Onl" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -111,6 +112,24 @@
       <option name="PACKAGE_NAME" value="test" />
       <option name="MAIN_CLASS_NAME" value="test.DropDownTest" />
       <option name="METHOD_NAME" value="main" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest.successLoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AQA27Onl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.LoginTest" />
+      <option name="METHOD_NAME" value="successLoginTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -156,11 +175,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LoginTest.successLoginTest" />
         <item itemvalue="TestNG.DropDownTest.dropDownTestPriority" />
         <item itemvalue="TestNG.RadioButtonTest.valueRadioButtonTest" />
         <item itemvalue="TestNG.RadioButtonTest.textRadioButtonTest" />
         <item itemvalue="TestNG.DropDownTest.main" />
-        <item itemvalue="TestNG.DropDownTest" />
       </list>
     </recent_temporary>
   </component>
