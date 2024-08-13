@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class ValueOfObjectTest extends BaseTest {
 
     @Test
-    public void successLoginTest(){
+    public void successLoginTest() {
         userStep.successfulLogin(ReadProperties.username(), ReadProperties.password());
         projectStep.clickAddProject();
         project.setProjectName(String.valueOf(faker.pokemon()));
@@ -20,6 +20,6 @@ public class ValueOfObjectTest extends BaseTest {
         Assert.assertFalse(project.isEnableApprovals());
         projectStep.addProject(project);
         projectStep.createProject();
-        projectsPage.isProjectCreated();
+        Assert.assertTrue(projectsPage.isProjectCreated());
     }
 }
