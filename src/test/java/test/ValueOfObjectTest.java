@@ -11,8 +11,8 @@ public class ValueOfObjectTest extends BaseTest {
     public void successLoginTest() {
         userStep.successfulLogin(ReadProperties.username(), ReadProperties.password());
         projectStep.clickAddProject();
-        project.setProjectName(String.valueOf(faker.pokemon()));
-        project.setAnnouncement(String.valueOf(faker.lebowski()));
+        project.setProjectName(faker.pokemon().name());
+        project.setAnnouncement(faker.company().name());
         project.setShowAnnouncement(true);
         Assert.assertTrue(project.isShowAnnouncement());
         project.setProjectType(1);
