@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c3b201d-aafd-4a52-9902-66b20a6a13f9" name="Changes" comment="Wrappers_HW">
-      <change afterPath="$PROJECT_DIR$/src/test/java/models/Project.java" afterDir="false" />
+    <list default="true" id="2c3b201d-aafd-4a52-9902-66b20a6a13f9" name="Changes" comment="init">
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/ProjectsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/baseEntities/BaseStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseEntities/BaseStep.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/baseEntities/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseEntities/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/Project.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/AddProjectPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/AddProjectPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/steps/ProjectStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/ProjectStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/ValueOfObjectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/ValueOfObjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/ValueOfObjectTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,26 +64,13 @@
     "TestNG.RadioButtonTest.valueRadioButtonTest.executor": "Run",
     "TestNG.ValueOfObjectTest.executor": "Run",
     "TestNG.ValueOfObjectTest.successLoginTest.executor": "Run",
-    "git-widget-placeholder": "Patterns__HW",
+    "git-widget-placeholder": "Patterns__HW__part__1__ValueOfObjects",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RunManager" selected="TestNG.ValueOfObjectTest.successLoginTest">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="AQA27Onl" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="AQA27Onl" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DropDownTest.dropDownTestPriority" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AQA27Onl" />
       <extension name="coverage">
@@ -238,7 +227,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723485481149</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="init">
+      <option name="closed" value="true" />
+      <created>1723496179772</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1723496179772</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
