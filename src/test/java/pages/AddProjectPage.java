@@ -6,12 +6,12 @@ import elements.RadioButton;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class EditProjectPage extends BasePage {
+public class AddProjectPage extends BasePage {
     private final By CHECKBOX_ANNOUNCEMENT_LOCATOR = By.id("show_announcement");
     private final By PROJECT_TYPE_RADIOBUTTON_LOCATOR = By.cssSelector("[name='suite_mode']");
 
 
-    public EditProjectPage(WebDriver driver) {
+    public AddProjectPage(WebDriver driver) {
         super(driver);
     }
 

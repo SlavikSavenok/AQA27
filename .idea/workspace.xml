@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c3b201d-aafd-4a52-9902-66b20a6a13f9" name="Changes" comment="Wrappers_HW">
-      <change beforePath="$PROJECT_DIR$/src/test/java/elements/Button.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/elements/CheckBox.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/elements/DropDown.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/elements/Input.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/elements/RadioButton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/elements/UIElement.java" beforeDir="false" />
-    </list>
+    <list default="true" id="2c3b201d-aafd-4a52-9902-66b20a6a13f9" name="Changes" comment="init" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,7 +51,7 @@
     "TestNG.RadioButtonTest.radioButtonTest.executor": "Run",
     "TestNG.RadioButtonTest.textRadioButtonTest.executor": "Run",
     "TestNG.RadioButtonTest.valueRadioButtonTest.executor": "Run",
-    "git-widget-placeholder": "Patterns__HW",
+    "git-widget-placeholder": "Patterns__HW__part__2__ChainOfInvocation",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "settings.editor.selected.configurable": "preferences.pluginManager"
@@ -228,8 +221,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="init" />
     <MESSAGE value="Wrappers_HW" />
-    <option name="LAST_COMMIT_MESSAGE" value="Wrappers_HW" />
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
 </project>
