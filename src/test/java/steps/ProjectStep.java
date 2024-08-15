@@ -2,6 +2,7 @@ package steps;
 
 import baseEntities.BaseStep;
 import org.openqa.selenium.WebDriver;
+import pages.AddProjectPage;
 import pages.AddTestCasePage;
 
 public class ProjectStep extends BaseStep {
@@ -40,4 +41,9 @@ public class ProjectStep extends BaseStep {
         addTestCasePage.getPriorityDropDown().selectByIndex(index);
     }
 
+    public AddProjectPage clickAddProject() {
+        dashboardPage.clickAddButton();
+
+        return addProjectPage;
+    }
 }

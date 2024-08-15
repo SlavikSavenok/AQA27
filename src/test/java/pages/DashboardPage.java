@@ -17,12 +17,8 @@ public class DashboardPage extends BasePage {
         return ADD_PROJECT_BUTTON_LOCATOR;
     }
 
-    public Button getEditButton() {
+    public Button getAddButton() {
         return new Button(pageDriver, ADD_PROJECT_BUTTON_LOCATOR);
-    }
-
-    public void clickEdit() {
-        getEditButton().click();
     }
 
     public Button getTestCases() {
@@ -31,5 +27,9 @@ public class DashboardPage extends BasePage {
 
     public void clickTestCases(){
         getTestCases().click();
+    }
+
+    public void clickAddButton() {
+        getAddButton().click();
     }
 }

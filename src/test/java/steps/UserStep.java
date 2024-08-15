@@ -2,8 +2,8 @@ package steps;
 
 import baseEntities.BaseStep;
 import org.openqa.selenium.WebDriver;
-import pages.DashboardPage;
 import pages.AddProjectPage;
+import pages.DashboardPage;
 import pages.TestCasesPage;
 
 
@@ -20,9 +20,9 @@ public class UserStep extends BaseStep {
     }
 
     private void login(String username, String password) {
-        loginPage.setEmailValue(username);
-        loginPage.setPasswordValue(password);
-        loginPage.clickLogin();
+        loginPage.setEmailValue(username)
+                .setPasswordValue(password)
+                .clickLogin();
     }
 
     public AddProjectPage openEditProjectPage() {
@@ -32,10 +32,10 @@ public class UserStep extends BaseStep {
     }
 
     private void openEditProject() {
-        dashboardPage.clickEdit();
+        dashboardPage.clickAddButton();
     }
 
-    public TestCasesPage editTestCasesPage () {
+    public TestCasesPage editTestCasesPage() {
         openTestCases();
         return testCasesPage;
     }

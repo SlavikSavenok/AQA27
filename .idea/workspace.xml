@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c3b201d-aafd-4a52-9902-66b20a6a13f9" name="Changes" comment="init" />
+    <list default="true" id="2c3b201d-aafd-4a52-9902-66b20a6a13f9" name="Changes" comment="init">
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/ProjectsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/baseEntities/BaseStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseEntities/BaseStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/baseEntities/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseEntities/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/AddProjectPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/AddProjectPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/DashboardPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/ProjectStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/ProjectStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/UserStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/UserStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/ChainOfInvocationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/ChainOfInvocationTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +49,8 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG.ChainOfInvocationTests.successLoginTest.executor": "Run",
     "TestNG.CheckBoxTest.checkBoxTest.executor": "Run",
     "TestNG.CheckBoxTest.executor": "Run",
     "TestNG.CheckBoxTest.removeBoxTest.executor": "Run",
@@ -57,8 +70,8 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.DropDownTest.dropDownTestPriority">
-    <configuration name="DropDownTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.ChainOfInvocationTests.successLoginTest">
+    <configuration name="ChainOfInvocationTests.successLoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AQA27Onl" />
       <extension name="coverage">
         <pattern>
@@ -67,8 +80,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.DropDownTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="test.ChainOfInvocationTests" />
+      <option name="METHOD_NAME" value="successLoginTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -149,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ChainOfInvocationTests.successLoginTest" />
         <item itemvalue="TestNG.DropDownTest.dropDownTestPriority" />
         <item itemvalue="TestNG.RadioButtonTest.valueRadioButtonTest" />
         <item itemvalue="TestNG.RadioButtonTest.textRadioButtonTest" />
         <item itemvalue="TestNG.DropDownTest.main" />
-        <item itemvalue="TestNG.DropDownTest" />
       </list>
     </recent_temporary>
   </component>
@@ -206,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723257764349</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="init">
+      <option name="closed" value="true" />
+      <created>1723608434688</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1723608434688</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

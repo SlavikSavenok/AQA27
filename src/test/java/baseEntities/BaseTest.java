@@ -6,6 +6,7 @@ import org.testng.ITestContext;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
+import pages.AddProjectPage;
 import pages.AddTestCasePage;
 import services.BrowsersService;
 import services.WaitsService;
@@ -21,6 +22,7 @@ public class BaseTest {
     protected WaitsService waitsService;
     protected ProjectStep projectStep;
     protected AddTestCasePage addTestCasePage;
+    protected AddProjectPage addProjectPage;
 
     @BeforeMethod
     public void setup(ITestContext iTestContext) {
@@ -30,6 +32,7 @@ public class BaseTest {
         userStep = new UserStep(driver);
         projectStep = new ProjectStep(driver);
         addTestCasePage = new AddTestCasePage(driver);
+        addProjectPage=new AddProjectPage(driver);
         driver.get(ReadProperties.getUrl());
     }
 
