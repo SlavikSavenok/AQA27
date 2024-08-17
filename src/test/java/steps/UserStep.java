@@ -12,35 +12,4 @@ public class UserStep extends BaseStep {
     public UserStep(WebDriver driver) {
         super(driver);
     }
-
-    public DashboardPage successfulLogin(String username, String password) {
-        login(username, password);
-
-        return dashboardPage;
-    }
-
-    private void login(String username, String password) {
-        loginPage.setEmailValue(username)
-                .setPasswordValue(password)
-                .clickLogin();
-    }
-
-    public AddProjectPage openEditProjectPage() {
-        openEditProject();
-
-        return addProjectPage;
-    }
-
-    private void openEditProject() {
-        dashboardPage.clickAddButton();
-    }
-
-    public TestCasesPage editTestCasesPage() {
-        openTestCases();
-        return testCasesPage;
-    }
-
-    private void openTestCases() {
-        dashboardPage.clickTestCases();
-    }
 }

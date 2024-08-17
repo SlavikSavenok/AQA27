@@ -1,5 +1,6 @@
 package baseEntities;
 
+import com.github.javafaker.Faker;
 import configuration.ReadProperties;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
@@ -8,6 +9,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import pages.AddProjectPage;
 import pages.AddTestCasePage;
+import pages.LoginPage;
+import pages.ProjectsPage;
 import services.BrowsersService;
 import services.WaitsService;
 import steps.ProjectStep;
@@ -23,6 +26,9 @@ public class BaseTest {
     protected ProjectStep projectStep;
     protected AddTestCasePage addTestCasePage;
     protected AddProjectPage addProjectPage;
+    protected LoginPage loginPage;
+    protected Faker faker;
+    protected ProjectsPage projectsPage;
 
     @BeforeMethod
     public void setup(ITestContext iTestContext) {
@@ -32,7 +38,10 @@ public class BaseTest {
         userStep = new UserStep(driver);
         projectStep = new ProjectStep(driver);
         addTestCasePage = new AddTestCasePage(driver);
-        addProjectPage=new AddProjectPage(driver);
+        addProjectPage = new AddProjectPage(driver);
+        loginPage = new LoginPage(driver);
+        projectsPage = new ProjectsPage(driver);
+        faker = new Faker();
         driver.get(ReadProperties.getUrl());
     }
 

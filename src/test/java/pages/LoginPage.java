@@ -48,4 +48,16 @@ public class LoginPage extends BasePage {
     public void clickLogin() {
         getLoginButton().click();
     }
+
+    private void login(String username, String password) {
+        setEmailValue(username);
+        setPasswordValue(password);
+        clickLogin();
+    }
+
+    public DashboardPage successfulLogin(String username, String password) {
+        login(username, password);
+
+        return new DashboardPage(pageDriver);
+    }
 }

@@ -8,14 +8,20 @@ import org.testng.annotations.Test;
 public class ChainOfInvocationTests extends BaseTest {
 
     @Test
-    public void successLoginTest() throws InterruptedException {
+    public void successLoginTest(){
         Assert.assertTrue(
-                userStep
+                loginPage
                         .successfulLogin(ReadProperties.username(), ReadProperties.password())
-                        .isPageOpened()  );
+                        .isPageOpened());
+        Assert.assertTrue(
+                projectStep
+                         .clickAddProject()
+                         .isPageOpened());
+        Assert.assertTrue(
+                addProjectPage
+                        .successCreateProject(faker.funnyName().name(), faker.company().name(), 2)
+                        .isPageOpened());
 
-
-
-        Thread.sleep(3000);
+        Assert.assertTrue(projectsPage.isProjectCreated());
     }
 }

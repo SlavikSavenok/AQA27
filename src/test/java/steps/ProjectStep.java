@@ -11,39 +11,11 @@ public class ProjectStep extends BaseStep {
         super(driver);
     }
 
-    public void clickCheckBox(){
-        addProjectPage.clickCheckBox();
-    }
-
-    public void removeCheckBox(){
-        addProjectPage.removeCheckBox();
-    }
-
-    public void selectRadioButtonByIndex(int index){
-        addProjectPage.getProjectTypeRadioButton().selectByIndex(index);
-    }
-
-    public void selectRadioButtonByValue(String value){
-        addProjectPage.getProjectTypeRadioButton().selectByValue(value);
-    }
-
-    public void selectRadioButtonByText(String text){
-        addProjectPage.getProjectTypeRadioButton().selectByText(text);
-    }
-
-    public AddTestCasePage addTestCase(){
-        testCasesPage.clickAddTestCase();
-
-        return addTestCasePage;
-    }
-
-    public void selectDropDownByIndex(int index){
-        addTestCasePage.getPriorityDropDown().selectByIndex(index);
-    }
-
     public AddProjectPage clickAddProject() {
         dashboardPage.clickAddButton();
 
         return addProjectPage;
     }
+
+
 }

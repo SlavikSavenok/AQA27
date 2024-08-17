@@ -30,8 +30,20 @@ public class AddProjectPage extends BasePage {
         return new Input(pageDriver, NAME_FIELD_LOCATOR);
     }
 
+    public AddProjectPage setProjectName(String projectName) {
+        getProjectName().write(projectName);
+
+        return this;
+    }
+
     public Input getAnnouncement() {
-       return new Input(pageDriver, ANNOUNCEMENT_FIELD_LOCATOR);
+        return new Input(pageDriver, ANNOUNCEMENT_FIELD_LOCATOR);
+    }
+
+    public AddProjectPage setAnnouncement(String announcement) {
+        getAnnouncement().write(announcement);
+
+        return this;
     }
 
     public CheckBox getCheckBoxButton() {
@@ -50,31 +62,33 @@ public class AddProjectPage extends BasePage {
         return new Button(pageDriver, ACCEPT_BUTTON_LOCATOR);
     }
 
-    public void clickCheckBox() {
-        getCheckBoxButton().setCheckBox();
+    public void clickCheckBoxShowAnnouncement() {
+        new CheckBox(pageDriver, CHECKBOX_ANNOUNCEMENT_LOCATOR).setCheckBox();
     }
 
-    public void removeCheckBox() {
-        getCheckBoxButton().removeCheckBox();
+    public void setProjectType(int projectType) {
+        getProjectTypeRadioButton().selectByIndex(projectType);
     }
 
-    public AddProjectPage setProjectName(String projectName) {
-        getProjectName().write(projectName);
-
-        return this;
+    public void clickCheckBoxEnableTCApprovals() {
+        new CheckBox(pageDriver, CHECKBOX_ENABLE_TEST_CASE_LOCATOR).removeCheckBox();
     }
 
-    public AddProjectPage setAnnouncement(String announcement) {
-        getAnnouncement().write(announcement);
-
-        return this;
+    public void createProject() {
+        getCreateProject().click();
     }
 
-    public void createdProject(String value) {
-        setProjectName(value);
-        setAnnouncement(value);
+    private void createdProject(String projectName, String announcement, int index) {
+        setProjectName(projectName);
+        setAnnouncement(announcement);
+        clickCheckBoxShowAnnouncement();
+        setProjectType(index);
+        clickCheckBoxEnableTCApprovals();
+        createProject();
+    }
 
-
-
+    public ProjectsPage successCreateProject(String projectName, String announcement, int index) {
+        createdProject(projectName, announcement, index);
+        return new ProjectsPage(pageDriver);
     }
 }
