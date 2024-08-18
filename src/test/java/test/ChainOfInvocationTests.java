@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class ChainOfInvocationTests extends BaseTest {
 
     @Test
-    public void successLoginTest(){
+    public void chainOfInvocationTest(){
         Assert.assertTrue(
                 loginPage
                         .successfulLogin(ReadProperties.username(), ReadProperties.password())
