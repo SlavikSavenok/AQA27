@@ -5,8 +5,8 @@ import org.openqa.selenium.WebDriver;
 
 
 public class AddRemoveSteps extends BaseStep {
-    public AddRemoveSteps(WebDriver driver) {
-        super(driver);
+    public AddRemoveSteps() {
+        super();
     }
 
     public void successAddToCart() {

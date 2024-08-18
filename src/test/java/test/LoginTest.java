@@ -9,14 +9,14 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void loginTestStandardUser(){
-        Assert.assertTrue(userSteps.successLogin(ReadProperties.username(), ReadProperties.password()).isPageOpen());
+        Assert.assertTrue(userSteps.successLogin(ReadProperties.username(), ReadProperties.password()).isPageOpened());
     }
     @Test
     public void loginTestVisualUser(){
-        Assert.assertTrue(userSteps.successLogin("visual_user", ReadProperties.password()).isPageOpen());
+        Assert.assertTrue(userSteps.successLogin("visual_user", ReadProperties.password()).isPageOpened());
     }
     @Test
     public void loginTestProblemUser(){
-        Assert.assertTrue(userSteps.successLogin("problem_user", ReadProperties.password()).isPageOpen());
+        Assert.assertTrue(userSteps.successLogin("problem_user", ReadProperties.password()).isPageOpened());
     }
 }

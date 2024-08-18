@@ -1,18 +1,32 @@
 package baseEntities;
 
+import configuration.ReadProperties;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import java.time.Duration;
+import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 public abstract class BasePage {
-    protected WebDriver pageDriver;
+    private Logger logger = LogManager.getLogger(this);
 
-    public BasePage(WebDriver driver) {
-        this.pageDriver = driver;
+    protected final int WAIT_FOR_PAGE_LOADED_IN_SECONDS = 30;
+
+    public BasePage() {
+    }
+
+    protected void load() {
+        open(ReadProperties.getUrl() + getPagePath());
     }
 
     protected abstract By getPageIdentifier();
+    protected abstract String getPagePath();
 
-    public boolean isPageOpen() {
-        return pageDriver.findElement(getPageIdentifier()).isDisplayed();
+    public boolean isPageOpened() {
+        return $(getPageIdentifier())
+                .shouldBe(visible, Duration.ofSeconds(WAIT_FOR_PAGE_LOADED_IN_SECONDS))
+                .isDisplayed();
     }
 }

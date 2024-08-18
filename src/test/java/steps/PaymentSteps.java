@@ -6,8 +6,8 @@ import pages.OverviewPage;
 
 public class PaymentSteps extends BaseStep {
 
-    public PaymentSteps(WebDriver driver) {
-        super(driver);
+    public PaymentSteps() {
+        super();
     }
 
     public void successGoToCart(){

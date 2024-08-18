@@ -1,9 +1,12 @@
 package pages;
 
 import baseEntities.BasePage;
+import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
+import static com.codeborne.selenide.Selenide.$;
 
 public class CheckoutInformationPage extends BasePage {
     private final By FIRSTNAME_FIELD_LOCATOR = By.id("first-name");
@@ -11,8 +14,8 @@ public class CheckoutInformationPage extends BasePage {
     private final By ZIP_FIELD_LOCATOR = By.id("postal-code");
     private final By CONTINUE_BUTTON_LOCATOR = By.id("continue");
 
-    public CheckoutInformationPage(WebDriver driver) {
-        super(driver);
+    public CheckoutInformationPage() {
+        super();
     }
 
     @Override
@@ -20,32 +23,37 @@ public class CheckoutInformationPage extends BasePage {
         return null;
     }
 
-    public WebElement getFirstname() {
-        return pageDriver.findElement(FIRSTNAME_FIELD_LOCATOR);
+    @Override
+    protected String getPagePath() {
+        return "/";
     }
 
-    public WebElement getLastname() {
-        return pageDriver.findElement(LASTNAME_FIELD_LOCATOR);
+    public SelenideElement getFirstname() {
+        return $(FIRSTNAME_FIELD_LOCATOR);
     }
 
-    public WebElement getZip() {
-        return pageDriver.findElement(ZIP_FIELD_LOCATOR);
+    public SelenideElement getLastname() {
+        return $(LASTNAME_FIELD_LOCATOR);
     }
 
-    public WebElement getContinueButton() {
-        return pageDriver.findElement(CONTINUE_BUTTON_LOCATOR);
+    public SelenideElement getZip() {
+        return $(ZIP_FIELD_LOCATOR);
+    }
+
+    public SelenideElement getContinueButton() {
+        return $(CONTINUE_BUTTON_LOCATOR);
     }
 
     public void setFirstNameValue(String value) {
-        getFirstname().sendKeys(value);
+        getFirstname().val(value);
     }
 
     public void setLastNameValue(String value) {
-        getLastname().sendKeys(value);
+        getLastname().val(value);
     }
 
     public void setZipValue(String value) {
-        getZip().sendKeys(value);
+        getZip().val(value);
     }
 
     public void clickContinueButton() {

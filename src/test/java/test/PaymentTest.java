@@ -13,7 +13,7 @@ public class PaymentTest extends BaseTest {
         addRemoveSteps.successAddToCart();
         paymentSteps.successGoToCart();
         paymentSteps.successGoToCheckoutInformation();
-        Assert.assertTrue(paymentSteps.successGoToOverview("Ivan", "Ivanov", "1111").isPageOpen());
+        Assert.assertTrue(paymentSteps.successGoToOverview("Ivan", "Ivanov", "1111").isPageOpened());
         paymentSteps.successFinishPayment();
         paymentSteps.successBackHome();
     }

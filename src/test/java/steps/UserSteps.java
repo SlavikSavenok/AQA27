@@ -6,8 +6,8 @@ import pages.MenuPage;
 
 public class UserSteps extends BaseStep {
 
-    public UserSteps(WebDriver driver) {
-        super(driver);
+    public UserSteps() {
+        super();
     }
 
     public MenuPage successLogin(String username, String password) {

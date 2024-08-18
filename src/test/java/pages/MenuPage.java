@@ -1,9 +1,12 @@
 package pages;
 
 import baseEntities.BasePage;
+import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
+import static com.codeborne.selenide.Selenide.$;
 
 public class MenuPage extends BasePage {
     protected final By TOP_LOGO_MENU_PAGE = By.cssSelector(".app_logo");
@@ -14,8 +17,8 @@ public class MenuPage extends BasePage {
     protected final By CART_LOCATOR = By.className("shopping_cart_link");
 
 
-    public MenuPage(WebDriver driver) {
-        super(driver);
+    public MenuPage() {
+        super();
     }
 
     @Override
@@ -23,23 +26,28 @@ public class MenuPage extends BasePage {
         return TOP_LOGO_MENU_PAGE;
     }
 
-    public WebElement getAddSauceLabsBackpack() {
-        return pageDriver.findElement(ADD_SAUCE_LABS_BACKPACK);
+    @Override
+    protected String getPagePath() {
+        return "/";
     }
 
-    public WebElement getAddSauceLabsOnesie() {
-        return pageDriver.findElement(ADD_SAUCE_LABS_ONESIE);
-    }
-    public WebElement getRemoveSauceLabsBackpack() {
-        return pageDriver.findElement(REMOVE_SAUCE_LABS_BACKPACK);
+    public SelenideElement getAddSauceLabsBackpack() {
+        return $(ADD_SAUCE_LABS_BACKPACK);
     }
 
-    public WebElement getRemoveSauceLabsOnesie() {
-        return pageDriver.findElement(REMOVE_SAUCE_LABS_ONESIE);
+    public SelenideElement getAddSauceLabsOnesie() {
+        return $(ADD_SAUCE_LABS_ONESIE);
+    }
+    public SelenideElement getRemoveSauceLabsBackpack() {
+        return $(REMOVE_SAUCE_LABS_BACKPACK);
     }
 
-    public WebElement getCartButton() {
-        return pageDriver.findElement(CART_LOCATOR);
+    public SelenideElement getRemoveSauceLabsOnesie() {
+        return $(REMOVE_SAUCE_LABS_ONESIE);
+    }
+
+    public SelenideElement getCartButton() {
+        return $(CART_LOCATOR);
     }
 
     public void setAddSauceLabsBackpack() {

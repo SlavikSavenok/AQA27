@@ -1,15 +1,18 @@
 package pages;
 
 import baseEntities.BasePage;
+import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import static com.codeborne.selenide.Selenide.$;
+
 public class CheckoutComplete extends BasePage {
     private final By BACK_HOME_LOCATOR = By.id("back-to-products");
 
-    public CheckoutComplete(WebDriver driver) {
-        super(driver);
+    public CheckoutComplete() {
+        super();
     }
 
     @Override
@@ -17,8 +20,13 @@ public class CheckoutComplete extends BasePage {
         return BACK_HOME_LOCATOR;
     }
 
-    public WebElement getBackHomeButton() {
-        return pageDriver.findElement(BACK_HOME_LOCATOR);
+    @Override
+    protected String getPagePath() {
+        return "/";
+    }
+
+    public SelenideElement getBackHomeButton() {
+        return $(BACK_HOME_LOCATOR);
     }
 
     public void clickBackHome() {
