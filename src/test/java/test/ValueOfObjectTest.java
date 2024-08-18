@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class ValueOfObjectTest extends BaseTest {
 
     @Test
-    public void successLoginTest() {
+    public void valueOfObjectTest() {
         userStep.successfulLogin(ReadProperties.username(), ReadProperties.password());
         projectStep.clickAddProject();
         project.setProjectName(faker.pokemon().name());
