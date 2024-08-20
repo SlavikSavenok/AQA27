@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c3b201d-aafd-4a52-9902-66b20a6a13f9" name="Changes" comment="Wrappers_HW">
-      <change beforePath="$PROJECT_DIR$/src/test/java/elements/Button.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/elements/CheckBox.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/elements/DropDown.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/elements/Input.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/elements/RadioButton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/elements/UIElement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +53,7 @@
     "TestNG.RadioButtonTest.radioButtonTest.executor": "Run",
     "TestNG.RadioButtonTest.textRadioButtonTest.executor": "Run",
     "TestNG.RadioButtonTest.valueRadioButtonTest.executor": "Run",
-    "git-widget-placeholder": "Patterns__HW",
+    "git-widget-placeholder": "Wrappers__HW",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "settings.editor.selected.configurable": "preferences.pluginManager"
