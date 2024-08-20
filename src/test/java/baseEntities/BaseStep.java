@@ -1,6 +1,5 @@
 package baseEntities;
 
-import org.openqa.selenium.WebDriver;
 import pages.*;
 
 public class BaseStep {
@@ -9,14 +8,14 @@ public class BaseStep {
     protected CartPage cartPage;
     protected CheckoutInformationPage checkoutInformationPage;
     protected OverviewPage overviewPage;
-    protected CheckoutComplete checkoutComplete;
+    protected CheckoutCompletePage checkoutCompletePage;
 
     public BaseStep() {
         loginPage = new LoginPage();
         menuPage = new MenuPage();
         cartPage = new CartPage();
         overviewPage = new OverviewPage();
-        checkoutComplete = new CheckoutComplete();
+        checkoutCompletePage = new CheckoutCompletePage();
         checkoutInformationPage = new CheckoutInformationPage();
     }
 }

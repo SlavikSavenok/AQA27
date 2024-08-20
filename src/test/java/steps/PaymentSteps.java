@@ -1,7 +1,6 @@
 package steps;
 
 import baseEntities.BaseStep;
-import org.openqa.selenium.WebDriver;
 import pages.OverviewPage;
 
 public class PaymentSteps extends BaseStep {
@@ -35,6 +34,6 @@ public class PaymentSteps extends BaseStep {
     }
 
     public void successBackHome(){
-        checkoutComplete.clickBackHome();
+        checkoutCompletePage.clickBackHome();
     }
 }

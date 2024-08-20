@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class MenuPage extends BasePage {
     protected final By TOP_LOGO_MENU_PAGE = By.cssSelector(".app_logo");
     protected final By ADD_SAUCE_LABS_BACKPACK = By.id("add-to-cart-sauce-labs-backpack");
-    protected final By ADD_SAUCE_LABS_ONESIE = By.id("add-to-cart-sauce-labs-onesie");
+    protected final By ADD_SAUCE_LABS_ONESIE = By.name("add-to-cart-sauce-labs-onesie");
     protected final By REMOVE_SAUCE_LABS_BACKPACK = By.id("remove-sauce-labs-backpack");
     protected final By REMOVE_SAUCE_LABS_ONESIE = By.id("remove-sauce-labs-onesie");
     protected final By CART_LOCATOR = By.className("shopping_cart_link");

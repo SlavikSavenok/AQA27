@@ -3,15 +3,13 @@ package pages;
 import baseEntities.BasePage;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class CheckoutComplete extends BasePage {
+public class CheckoutCompletePage extends BasePage {
     private final By BACK_HOME_LOCATOR = By.id("back-to-products");
 
-    public CheckoutComplete() {
+    public CheckoutCompletePage() {
         super();
     }
 
