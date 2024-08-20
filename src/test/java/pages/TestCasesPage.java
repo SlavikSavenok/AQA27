@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class TestCasesPage extends BasePage {
-    private final By ADD_TEST_CASE_LOCATOR =By.id("sidebar-cases-add");
+    private final By ADD_TEST_CASE_LOCATOR = By.id("sidebar-cases-add");
 
     public TestCasesPage(WebDriver driver) {
         super(driver);
@@ -21,7 +21,7 @@ public class TestCasesPage extends BasePage {
         return new Button(pageDriver, ADD_TEST_CASE_LOCATOR);
     }
 
-    public void clickAddTestCase(){
+    public void clickAddTestCase() {
         getAddTestCase().click();
     }
 }

@@ -5,10 +5,14 @@ import elements.Button;
 import elements.CheckBox;
 import elements.Input;
 import elements.RadioButton;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class AddProjectPage extends BasePage {
+    private Logger logger= LogManager.getLogger(AddProjectPage.class);
+
     private final By CHECKBOX_ANNOUNCEMENT_LOCATOR = By.id("show_announcement");
     private final By CHECKBOX_ENABLE_TEST_CASE_LOCATOR = By.name("case_statuses_enabled");
     private final By PROJECT_TYPE_RADIOBUTTON_LOCATOR = By.cssSelector("[name='suite_mode']");
@@ -43,10 +47,12 @@ public class AddProjectPage extends BasePage {
     }
 
     public void setProjectName(String projectName){
+        logger.info(projectName);
         new Input(pageDriver,NAME_FIELD_LOCATOR).write(projectName);
     }
 
     public void setAnnouncement(String projectAnnouncement){
+        logger.info(projectAnnouncement);
         new Input(pageDriver,ANNOUNCEMENT_FIELD_LOCATOR).write(projectAnnouncement);
     }
 

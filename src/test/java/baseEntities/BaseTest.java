@@ -3,6 +3,7 @@ package baseEntities;
 import com.github.javafaker.Faker;
 import configuration.ReadProperties;
 import models.Project;
+import models.User;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterMethod;
@@ -25,6 +26,7 @@ public class BaseTest {
     protected Project project;
     protected Faker faker;
     protected ProjectsPage projectsPage;
+    protected User user;
 
     @BeforeMethod
     public void setup(ITestContext iTestContext) {
@@ -36,6 +38,7 @@ public class BaseTest {
         project = new Project();
         faker = new Faker();
         projectsPage = new ProjectsPage(driver);
+        user = new User();
         driver.get(ReadProperties.getUrl());
     }
 
