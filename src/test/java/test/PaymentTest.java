@@ -5,6 +5,7 @@ import configuration.ReadProperties;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+
 public class PaymentTest extends BaseTest {
 
     @Test
