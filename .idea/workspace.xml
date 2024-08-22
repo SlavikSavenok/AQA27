@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ff37d4a-cae8-4e77-9e94-1ac0b44f2dc8" name="Changes" comment="WebDriver homework" />
+    <list default="true" id="6ff37d4a-cae8-4e77-9e94-1ac0b44f2dc8" name="Changes" comment="init">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/allure.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UnitTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -286,6 +291,7 @@
     <MESSAGE value="1.Created two methods.&#10;2.Wrote tests to validate these methods.&#10;3.Created various xml files to run different tests." />
     <MESSAGE value="Сorrected" />
     <MESSAGE value="WebDriver homework" />
-    <option name="LAST_COMMIT_MESSAGE" value="WebDriver homework" />
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
 </project>
