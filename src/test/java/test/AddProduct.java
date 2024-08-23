@@ -18,4 +18,5 @@ public class AddProduct extends BaseTest {
       Assert.assertTrue(userSteps.successLogin(ReadProperties.username(), ReadProperties.password()).isPageOpen());
         addRemoveSteps.successAddToCart();
     }
+
 }
