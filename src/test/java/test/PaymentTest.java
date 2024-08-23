@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 public class PaymentTest extends BaseTest {
 
     @Test
-    public void paymentTest() throws InterruptedException {
+    public void paymentTest(){
         userSteps.successLogin(ReadProperties.username(), ReadProperties.password());
         addRemoveSteps.successAddToCart();
         paymentSteps.successGoToCart();
