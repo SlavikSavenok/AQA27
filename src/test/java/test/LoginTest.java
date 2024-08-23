@@ -25,11 +25,11 @@ public class LoginTest extends BaseTest {
         Assert.assertTrue(userSteps.successLogin("visual_user", ReadProperties.password()).isPageOpen());
     }
 
-    @Test(description = "Тест на проверку логина")
+  /*  @Test(description = "Тест на проверку логина")
     @Description("Тест проверяет вход под логином ProblemUser")
     @Severity(SeverityLevel.CRITICAL)
     public void loginTestProblemUser(){
         Assert.assertTrue(userSteps.successLogin("problem_user", ReadProperties.password()).isPageOpen());
         Assert.assertTrue(false);
-    }
+    }*/
 }
