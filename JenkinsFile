@@ -7,7 +7,7 @@ pipeline {
     }
 
     parameters {
-        gitParameter branchFilter: 'origin/(.*)', defaultValue: 'ci_cd', name: 'BRANCH', type: 'PT_BRANCH'
+        gitParameter branchFilter: 'origin/(.*)', defaultValue: 'CI_CD', name: 'BRANCH', type: 'PT_BRANCH'
     }
 
     stages {
