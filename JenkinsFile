@@ -14,7 +14,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Get some code from a GitHub repository
-                git branch: "${params.BRANCH}", url: 'https://github.com/SlavikSavenok/AQA27.git'
+                git branch: "CI_CD", url: 'https://github.com/SlavikSavenok/AQA27.git'
             }
         }
         stage('Test'){
