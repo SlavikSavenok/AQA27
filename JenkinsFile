@@ -7,7 +7,7 @@ pipeline {
     }
 
     parameters {
-        gitParameter branchFilter: 'origin/(.*)', defaultValue: 'CI_CD', name: 'BRANCH', type: 'PT_BRANCH'
+        gitParameter branchFilter: 'origin/(.*)', defaultValue: 'ci_cd', name: 'BRANCH', type: 'PT_BRANCH'
     }
 
     stages {
@@ -17,13 +17,23 @@ pipeline {
                 git branch: "${params.BRANCH}", url: 'https://github.com/SlavikSavenok/AQA27.git'
             }
         }
-        stage('Test'){
+        stage('Test') {
             steps {
                 // Run Maven on a Unix agent.
-                bat "mvn clean test"
+                sh "mvn clean test"
 
                 // To run Maven on a Windows agent, use
                 // bat "mvn clean test"
+            }
+
+            post {
+                // If Maven was able to run the tests, even if some of the test
+                // failed, record the test results and archive the jar file.
+                success {
+                    junit '**/target/surefire-reports/TEST-*.xml'
+                    //archiveArtifacts 'target/allure-results/**'
+                    allure includeProperties: false, jdk: '', results: [[path: 'target/allure-results']]
+                }
             }
         }
     }
