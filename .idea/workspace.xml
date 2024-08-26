@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c3b201d-aafd-4a52-9902-66b20a6a13f9" name="Changes" comment="Wrappers_HW" />
+    <list default="true" id="2c3b201d-aafd-4a52-9902-66b20a6a13f9" name="Changes" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,29 +36,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;TestNG.CheckBoxTest.checkBoxTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.CheckBoxTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.CheckBoxTest.removeBoxTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.DropDownTest.dropDownTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.DropDownTest.dropDownTestPriority.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.DropDownTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.DropDownTest.main.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.LoginTest.shortSuccessLoginTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.LoginTest.successLoginTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.RadioButtonTest.indexRadioButtonTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.RadioButtonTest.radioButtonTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.RadioButtonTest.textRadioButtonTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.RadioButtonTest.valueRadioButtonTest.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Wrappers__HW&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.CheckBoxTest.checkBoxTest.executor": "Run",
+    "TestNG.CheckBoxTest.executor": "Run",
+    "TestNG.CheckBoxTest.removeBoxTest.executor": "Run",
+    "TestNG.DropDownTest.dropDownTest.executor": "Run",
+    "TestNG.DropDownTest.dropDownTestPriority.executor": "Run",
+    "TestNG.DropDownTest.executor": "Run",
+    "TestNG.DropDownTest.main.executor": "Run",
+    "TestNG.LoginTest.shortSuccessLoginTest.executor": "Run",
+    "TestNG.LoginTest.successLoginTest.executor": "Run",
+    "TestNG.RadioButtonTest.indexRadioButtonTest.executor": "Run",
+    "TestNG.RadioButtonTest.radioButtonTest.executor": "Run",
+    "TestNG.RadioButtonTest.textRadioButtonTest.executor": "Run",
+    "TestNG.RadioButtonTest.valueRadioButtonTest.executor": "Run",
+    "git-widget-placeholder": "BDD__HW",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="TestNG.DropDownTest.dropDownTestPriority">
     <configuration name="DropDownTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AQA27Onl" />
@@ -147,6 +149,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="TestNG.DropDownTest" />
+      <item itemvalue="TestNG.DropDownTest.dropDownTestPriority" />
+      <item itemvalue="TestNG.DropDownTest.main" />
+      <item itemvalue="TestNG.RadioButtonTest.textRadioButtonTest" />
+      <item itemvalue="TestNG.RadioButtonTest.valueRadioButtonTest" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.DropDownTest.dropDownTestPriority" />
@@ -223,6 +232,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Wrappers_HW" />
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
