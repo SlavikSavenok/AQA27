@@ -4,8 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c3b201d-aafd-4a52-9902-66b20a6a13f9" name="Changes" comment="update">
+    <list default="true" id="2c3b201d-aafd-4a52-9902-66b20a6a13f9" name="Changes" comment="init">
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/AddMilestonePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/MilestonesPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepsDefs/Hook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepsDefs/LoginStepDefs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepsDefs/MilestonesStepDef.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepsDefs/ProjectStepsDef.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepsDefs/TestCasesStepsDef.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/login.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/milestone.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/usersSteps.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/baseEntities/BaseStep.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/baseEntities/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseEntities/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/DashboardPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/ProjectStep.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/UserStep.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/CheckBoxTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/DropDownTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/LoginTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/RadioButtonTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +60,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Cucumber Java.Feature: first.executor": "Run",
+    "Cucumber Java.Feature: login.executor": "Run",
+    "Cucumber Java.Feature: milestone.executor": "Run",
+    "Cucumber Java.Scenario: .executor": "Run",
+    "Cucumber Java.Scenario: create Milestone.executor": "Run",
+    "Cucumber Java.Scenario: Простой тест с Given.executor": "Run",
+    "Cucumber Java.Scenario: Простой тест со всеми ключевыми словами.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "TestNG.CheckBoxTest.checkBoxTest.executor": "Run",
     "TestNG.CheckBoxTest.executor": "Run",
@@ -56,113 +84,122 @@
     "git-widget-placeholder": "BDD__HW",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Project/AQA27/src/test/java/stepsDefs",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.DropDownTest.dropDownTestPriority">
-    <configuration name="DropDownTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Feature: milestone">
+    <configuration name="Feature: first" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/first.feature" />
+      <option name="GLUE" value="stepsDefs" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="AQA27Onl" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: first" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.DropDownTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DropDownTest.dropDownTestPriority" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/login.feature" />
+      <option name="GLUE" value="stepsDefs" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="AQA27Onl" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: login" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.DropDownTest" />
-      <option name="METHOD_NAME" value="dropDownTestPriority" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DropDownTest.main" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: milestone" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/milestone.feature" />
+      <option name="GLUE" value="stepsDefs" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="AQA27Onl" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: milestone" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.DropDownTest" />
-      <option name="METHOD_NAME" value="main" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RadioButtonTest.textRadioButtonTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: " type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/milestone.feature" />
+      <option name="GLUE" value="stepsDefs" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="AQA27Onl" />
+      <option name="NAME_FILTER" value="^$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: " />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.RadioButtonTest" />
-      <option name="METHOD_NAME" value="textRadioButtonTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RadioButtonTest.valueRadioButtonTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: create Milestone" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/milestone.feature" />
+      <option name="GLUE" value="stepsDefs" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="AQA27Onl" />
+      <option name="NAME_FILTER" value="^create Milestone$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^create Milestone$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: create Milestone" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.RadioButtonTest" />
-      <option name="METHOD_NAME" value="valueRadioButtonTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="TestNG.DropDownTest" />
-      <item itemvalue="TestNG.DropDownTest.dropDownTestPriority" />
-      <item itemvalue="TestNG.DropDownTest.main" />
-      <item itemvalue="TestNG.RadioButtonTest.textRadioButtonTest" />
-      <item itemvalue="TestNG.RadioButtonTest.valueRadioButtonTest" />
+      <item itemvalue="Cucumber Java.Feature: login" />
+      <item itemvalue="Cucumber Java.Feature: milestone" />
+      <item itemvalue="Cucumber Java.Scenario: " />
+      <item itemvalue="Cucumber Java.Scenario: create Milestone" />
+      <item itemvalue="Cucumber Java.Feature: first" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.DropDownTest.dropDownTestPriority" />
-        <item itemvalue="TestNG.RadioButtonTest.valueRadioButtonTest" />
-        <item itemvalue="TestNG.RadioButtonTest.textRadioButtonTest" />
-        <item itemvalue="TestNG.DropDownTest.main" />
-        <item itemvalue="TestNG.DropDownTest" />
+        <item itemvalue="Cucumber Java.Feature: milestone" />
+        <item itemvalue="Cucumber Java.Scenario: create Milestone" />
+        <item itemvalue="Cucumber Java.Scenario: " />
+        <item itemvalue="Cucumber Java.Feature: login" />
+        <item itemvalue="Cucumber Java.Feature: first" />
       </list>
     </recent_temporary>
   </component>
@@ -215,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723257764349</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="init">
+      <option name="closed" value="true" />
+      <created>1724654456631</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1724654456631</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -231,8 +276,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Wrappers_HW" />
-    <MESSAGE value="init" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/AQA27$Feature__first.ic" NAME="Feature: first Coverage Results" MODIFIED="1724685512680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>io.cucumber.core.cli.*</FILTER>
+    </SUITE>
   </component>
 </project>
