@@ -7,7 +7,8 @@ Feature:
     When user clicks milestones
     Then milestones page is displayed
     When user clicks Add Milestone
-    * write name "vvv"
+    Then Add Milestones page is displayed
+    * write name "AQA27"
 
 
 
