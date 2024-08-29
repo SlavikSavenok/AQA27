@@ -58,7 +58,7 @@ public class MenuPage extends BasePage {
         getAddSauceLabsOnesie().click();
     }
     public void setRemoveSauceLabsBackpack() {
-        getRemoveSauceLabsBackpack().click();;
+        getRemoveSauceLabsBackpack().click();
     }
 
     public void  setRemoveSauceLabsOnesie() {
