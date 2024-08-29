@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class PaymentTest extends BaseTest {
 
-    @Test()
+    @Test(groups = "CartTests")
     public void paymentTest(){
         userSteps.successLogin(ReadProperties.username(), ReadProperties.password());
         addRemoveSteps.successAddToCart();
