@@ -17,30 +17,28 @@ public class TestCaseStepDef extends BaseTest {
 
     public TestCaseStepDef(BaseTest baseTest) {
         this.baseTest = baseTest;
+        dashboardPage = new DashboardPage(baseTest.driver);
+        testCasesPage = new TestCasesPage(baseTest.driver);
+        addTestCasePage = new AddTestCasePage(baseTest.driver);
     }
 
     @When("user clicks Test Cases")
     public void userClickTestCases() {
-        dashboardPage = new DashboardPage(baseTest.driver);
         dashboardPage.clickTestCases();
     }
 
     @Then("Test Cases page is displayed")
     public void isAddMilestonePageOpened() {
-        testCasesPage = new TestCasesPage(baseTest.driver);
         Assert.assertTrue(testCasesPage.isPageOpened());
     }
 
     @When("user clicks Add TestCase")
     public void userClickAddTestCase() {
-        testCasesPage = new TestCasesPage(baseTest.driver);
         testCasesPage.clickAddTestCase();
     }
 
     @Then("Add TestCase page is displayed")
     public void isAddTestCasePageOpened() {
-        addTestCasePage = new AddTestCasePage(baseTest.driver);
         Assert.assertTrue(addTestCasePage.isPageOpened());
     }
-
 }

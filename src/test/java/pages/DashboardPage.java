@@ -9,6 +9,7 @@ public class DashboardPage extends BasePage {
     private final By ADD_PROJECT_BUTTON_LOCATOR = By.id("sidebar-projects-add");
     private final By GO_TO_TESTCASES_PAGE_LOCATOR =By.cssSelector("[href='index.php?/suites/view/5']");
     private final By GO_TO_MILESTONES_PAGE_LOCATOR=By.cssSelector("[href='index.php?/milestones/overview/6']");
+
     public DashboardPage(WebDriver driver) {
         super(driver);
     }
@@ -18,12 +19,12 @@ public class DashboardPage extends BasePage {
         return ADD_PROJECT_BUTTON_LOCATOR;
     }
 
-    public Button getEditButton() {
+    public Button getAddButton() {
         return new Button(pageDriver, ADD_PROJECT_BUTTON_LOCATOR);
     }
 
     public void clickEdit() {
-        getEditButton().click();
+        getAddButton().click();
     }
 
     public Button getTestCases() {

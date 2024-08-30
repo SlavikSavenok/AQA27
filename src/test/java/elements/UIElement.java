@@ -153,4 +153,5 @@ public class UIElement implements WebElement {
     public UIElement getParentElement() {
         return new UIElement(driver, webElement.findElement(By.xpath("./..")));
     }
+
 }
