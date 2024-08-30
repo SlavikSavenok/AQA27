@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c3b201d-aafd-4a52-9902-66b20a6a13f9" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/ProjectPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/elements/UIElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/elements/UIElement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/AddMilestonePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/AddMilestonePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/DashboardPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/MilestonesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/MilestonesPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepsDefs/Hook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepsDefs/Hook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepsDefs/MilestonesStepDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepsDefs/MilestonesStepDef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepsDefs/TestCaseStepDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepsDefs/TestCaseStepDef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/milestone.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/milestone.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,44 +38,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Cucumber Java.Feature: first.executor": "Run",
-    "Cucumber Java.Feature: login.executor": "Run",
-    "Cucumber Java.Feature: milestone.executor": "Run",
-    "Cucumber Java.Feature: testCases.executor": "Run",
-    "Cucumber Java.Scenario: .executor": "Run",
-    "Cucumber Java.Scenario: Create Milestone.executor": "Run",
-    "Cucumber Java.Scenario: Delete Milestone.executor": "Run",
-    "Cucumber Java.Scenario: Read Milestone.executor": "Run",
-    "Cucumber Java.Scenario: Update Milestone.executor": "Run",
-    "Cucumber Java.Scenario: create Milestone.executor": "Run",
-    "Cucumber Java.Scenario: create test case.executor": "Run",
-    "Cucumber Java.Scenario: Простой тест с Given.executor": "Run",
-    "Cucumber Java.Scenario: Простой тест со всеми ключевыми словами.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "TestNG.CheckBoxTest.checkBoxTest.executor": "Run",
-    "TestNG.CheckBoxTest.executor": "Run",
-    "TestNG.CheckBoxTest.removeBoxTest.executor": "Run",
-    "TestNG.DropDownTest.dropDownTest.executor": "Run",
-    "TestNG.DropDownTest.dropDownTestPriority.executor": "Run",
-    "TestNG.DropDownTest.executor": "Run",
-    "TestNG.DropDownTest.main.executor": "Run",
-    "TestNG.LoginTest.shortSuccessLoginTest.executor": "Run",
-    "TestNG.LoginTest.successLoginTest.executor": "Run",
-    "TestNG.RadioButtonTest.indexRadioButtonTest.executor": "Run",
-    "TestNG.RadioButtonTest.radioButtonTest.executor": "Run",
-    "TestNG.RadioButtonTest.textRadioButtonTest.executor": "Run",
-    "TestNG.RadioButtonTest.valueRadioButtonTest.executor": "Run",
-    "git-widget-placeholder": "BDD__HW",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Project/AQA27/src/test/java/stepsDefs",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Cucumber Java.Feature: first.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: login.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: milestone.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: testCases.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: .executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Create Milestone.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Delete Milestone.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Read Milestone.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Update Milestone.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: create Milestone.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: create test case.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Простой тест с Given.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Простой тест со всеми ключевыми словами.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TestNG.CheckBoxTest.checkBoxTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.CheckBoxTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.CheckBoxTest.removeBoxTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.DropDownTest.dropDownTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.DropDownTest.dropDownTestPriority.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.DropDownTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.DropDownTest.main.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTest.shortSuccessLoginTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTest.successLoginTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RadioButtonTest.indexRadioButtonTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RadioButtonTest.radioButtonTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RadioButtonTest.textRadioButtonTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RadioButtonTest.valueRadioButtonTest.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;BDD__HW&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Project/AQA27/src/test/java/stepsDefs&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Create Milestone">
+}</component>
+  <component name="RunManager" selected="Cucumber Java.Scenario: Read Milestone">
     <configuration name="Feature: milestone" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/milestone.feature" />
@@ -191,10 +184,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Scenario: Create Milestone" />
-        <item itemvalue="Cucumber Java.Scenario: Update Milestone" />
         <item itemvalue="Cucumber Java.Scenario: Read Milestone" />
         <item itemvalue="Cucumber Java.Feature: milestone" />
+        <item itemvalue="Cucumber Java.Scenario: Create Milestone" />
+        <item itemvalue="Cucumber Java.Scenario: Update Milestone" />
         <item itemvalue="Cucumber Java.Scenario: Delete Milestone" />
       </list>
     </recent_temporary>
@@ -256,7 +249,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724654456631</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="init">
+      <option name="closed" value="true" />
+      <created>1725028211389</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1725028211389</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -273,9 +274,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Wrappers_HW" />
     <MESSAGE value="update" />
-    <MESSAGE value="init" />
     <MESSAGE value="Correct" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correct" />
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/AQA27$Feature__first.ic" NAME="Feature: first Coverage Results" MODIFIED="1724685512680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">

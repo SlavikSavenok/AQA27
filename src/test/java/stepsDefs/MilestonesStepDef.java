@@ -119,7 +119,7 @@ public class MilestonesStepDef extends BaseTest {
 
     @And("Read Name field")
     public void readNameField() {
-        adMilestonesPage.readNameField();
+
     }
 
     @And("update Name field on {string}")

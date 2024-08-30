@@ -6,6 +6,7 @@ import elements.CheckBox;
 import elements.Input;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 public class AddMilestonePage extends BasePage {
     private final By NAME_FIELD_LOCATOR = By.id("name");
@@ -143,7 +144,7 @@ public class AddMilestonePage extends BasePage {
     }
 
     public void readNameField(){
-        System.out.println(getNameInput().getText());
+
     }
 
     public void updateNameField(String value){
