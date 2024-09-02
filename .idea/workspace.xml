@@ -147,6 +147,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="TestNG.DropDownTest" />
+      <item itemvalue="TestNG.DropDownTest.dropDownTestPriority" />
+      <item itemvalue="TestNG.DropDownTest.main" />
+      <item itemvalue="TestNG.RadioButtonTest.textRadioButtonTest" />
+      <item itemvalue="TestNG.RadioButtonTest.valueRadioButtonTest" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.DropDownTest.dropDownTestPriority" />
