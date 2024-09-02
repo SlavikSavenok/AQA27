@@ -6,7 +6,6 @@ import elements.CheckBox;
 import elements.Input;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 
 public class AddMilestonePage extends BasePage {
     private final By NAME_FIELD_LOCATOR = By.id("name");
@@ -14,16 +13,16 @@ public class AddMilestonePage extends BasePage {
     private final By DESCRIPTION_FIELD_LOCATOR = By.id("description_display");
     private final By START_DATE_FIELD_LOCATOR = By.id("start_on");
     private final By FIRST_AUGUST_DATE = By.xpath("//*[text()='1']");
-    private final By TENTH_AUGUST_DATE = By.xpath("//*[text()='1']");
-    private final By TWENTY_FIFTH_AUGUST_DATE = By.xpath("//*[text()='1']");
+    private final By TENTH_AUGUST_DATE = By.xpath("//*[text()='10']");
+    private final By TWENTY_FIFTH_AUGUST_DATE = By.xpath("//*[text()='25']");
     private final By END_DATE_FIELD_LOCATOR = By.id("due_on");
-    private final By THIRTY_FIRST_AUGUST_DATE = By.xpath("//*[text()='31']");
+    private final By THIRTY_FIRST_AUGUST_DATE = By.xpath("//*[text()='30']");
     private final By CHECKBOX_LOCATOR = By.id("is_completed");
     private final By ADD_MILESTONE_BUTTON = By.id("accept");
-    private final By DELETE_THIS_MILESTONE=By.cssSelector("[data-testid='buttonDelete']");
-    private final By POPUP_WINDOW_LOCATOR =By.id("deleteDialog");
-    private final By DELETE_CHECKBOX_LOCATOR=By.xpath("//*[@id='deleteDialog']//input");
-    private final By OK_BUTTON_POPUP_WINDOW=By.cssSelector("[data-testid='caseFieldsTabDeleteDialogButtonOk']");
+    private final By DELETE_THIS_MILESTONE = By.cssSelector("[data-testid='buttonDelete']");
+    private final By POPUP_WINDOW_LOCATOR = By.id("deleteDialog");
+    private final By DELETE_CHECKBOX_LOCATOR = By.xpath("//*[@id='deleteDialog']//input");
+    private final By OK_BUTTON_POPUP_WINDOW = By.cssSelector("[data-testid='caseFieldsTabDeleteDialogButtonOk']");
 
 
     public AddMilestonePage(WebDriver driver) {
@@ -119,61 +118,81 @@ public class AddMilestonePage extends BasePage {
         getEndDateField().click();
     }
 
-    public void clickFirstAugustDate(){
+    public void clickFirstAugustDate() {
         getFirstAugustField().click();
     }
 
-    public void clickThirtyFirstAugustDate(){
+    public void clickThirtyFirstAugustDate() {
         getThirtyFirstAugustField().click();
     }
 
-    public void clickOkButtonPopupWindow(){
+    public void clickOkButtonPopupWindow() {
         getOkButtonPopupWindow().click();
     }
 
-    public void setCheckBox(){
+    public void setCheckBox() {
         getCheckBox().setCheckBox();
     }
 
-    public void setDeleteCheckbox(){
+    public void setDeleteCheckbox() {
         getDeleteCheckBox().setCheckBox();
     }
 
-    public void clickAddMilestone(){
+    public void clickAddMilestone() {
         getAddMilestoneButton().click();
     }
 
-    public void readNameField(){
-
+    public String readNameField() {
+        return getNameInput().getAttribute("value");
     }
 
-    public void updateNameField(String value){
+    public String readReferencesField() {
+        return getReferencesInput().getAttribute("value");
+    }
+
+    public String readDescriptionField() {
+        return getDescriptionInput().getText();
+    }
+
+    public String readStartDateField() {
+        return getStartDateField().getAttribute("value");
+    }
+
+    public String readEndDateField() {
+        return getEndDateField().getAttribute("value");
+    }
+
+    public boolean readCheckboxField() {
+        return getCheckBox().isSelected();
+    }
+
+    public void updateNameField(String value) {
         getNameInput().clearAndWrite(value);
     }
 
-    public void updateReferenceField(String value){
+    public void updateReferenceField(String value) {
         getReferencesInput().clearAndWrite(value);
     }
 
-    public void updateDescriptionField(String value){
+    public void updateDescriptionField(String value) {
         getDescriptionInput().clearAndWrite(value);
     }
 
-    public void updateStartDate(){
+    public void updateStartDate() {
         getStartDateField().click();
         getTenthAugustField().click();
     }
 
-    public void updateEndDate(){
+    public void updateEndDate() {
         getEndDateField().click();
         getTwentyFifthAugustField().click();
     }
 
-    public void removeCheckbox(){
+    public void removeCheckbox() {
         getCheckBox().removeCheckBox();
     }
 
-    public void deleteMilestone(){
+    public void deleteMilestone() {
         getDeleteMilestoneButton().click();
     }
 }

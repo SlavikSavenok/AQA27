@@ -7,7 +7,7 @@ public class CheckBox {
     private final UIElement uiElement;
 
     public CheckBox(WebDriver driver, By by) {
-        this.uiElement = new UIElement(driver,by);
+        this.uiElement = new UIElement(driver, by);
     }
 
     public void setCheckBox() {
@@ -20,6 +20,10 @@ public class CheckBox {
         if (uiElement.isSelected()) {
             uiElement.click();
         }
+    }
+
+    public boolean isSelected() {
+        return uiElement.isSelected();
     }
 }
 

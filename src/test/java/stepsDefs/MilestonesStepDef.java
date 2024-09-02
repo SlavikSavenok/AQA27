@@ -117,8 +117,34 @@ public class MilestonesStepDef extends BaseTest {
         projectPage.clickEditButton();
     }
 
-    @And("Read Name field")
-    public void readNameField() {
+    @Then("name field has value {string}")
+    public void isNameField(String expectedValue) {
+        Assert.assertEquals(adMilestonesPage.readNameField(), expectedValue);
+    }
+
+    @And("references field has value {string}")
+    public void isReferenceField(String expectedValue) {
+        Assert.assertEquals(adMilestonesPage.readReferencesField(), expectedValue);
+    }
+
+    @And("description field has value {string}")
+    public void isDescriptionField(String expectedValue) {
+        Assert.assertEquals(adMilestonesPage.readDescriptionField(), expectedValue);
+    }
+
+    @And("start date field has value {string}")
+    public void isStartDateField(String expectedValue) {
+        Assert.assertEquals(adMilestonesPage.readStartDateField(), expectedValue);
+    }
+
+    @And("end date field has value {string}")
+    public void isEndDateField(String expectedValue) {
+        Assert.assertEquals(adMilestonesPage.readEndDateField(), expectedValue);
+    }
+
+    @And("is checkbox 'milestone completed' marked")
+    public void isCheckboxField() {
+        Assert.assertTrue(adMilestonesPage.readCheckboxField());
 
     }
 

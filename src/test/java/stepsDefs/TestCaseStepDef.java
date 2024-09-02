@@ -1,6 +1,7 @@
 package stepsDefs;
 
 import baseEntities.BaseTest;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
@@ -41,4 +42,22 @@ public class TestCaseStepDef extends BaseTest {
     public void isAddTestCasePageOpened() {
         Assert.assertTrue(addTestCasePage.isPageOpened());
     }
+
+    @Then("write {string}")
+    public void userWriteTitle(String title){
+        addTestCasePage.setTitleValue(title);
+    }
+
+    @And("select Section Dropdown")
+    public void userSelectsSection(){
+       addTestCasePage.setSectionDropDown("Test Cases");
+    }
+
+    @And("select Template Dropdown")
+    public void userTemplateSection(){
+       addTestCasePage.setTemplateDropDown("Behaviour Driven Development");
+    }
+
+
+
 }

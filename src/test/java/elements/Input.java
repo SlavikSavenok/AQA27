@@ -27,4 +27,12 @@ public class Input {
     public String getText() {
         return uiElement.getText();
     }
+
+    public String getAttribute() {
+        return getAttribute(null);
+    }
+
+    public String getAttribute(String value) {
+        return uiElement.getAttribute(value);
+    }
 }

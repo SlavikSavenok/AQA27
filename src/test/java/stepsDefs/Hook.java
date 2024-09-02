@@ -19,7 +19,7 @@ public class Hook extends BaseTest {
         baseTest.driver = new BrowsersService().getDriver();
     }
 
-  /*  @After
+   /*@After
     public void closeBrowser(){
         baseTest.driver.quit();
     }*/

@@ -4,10 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c3b201d-aafd-4a52-9902-66b20a6a13f9" name="Changes" comment="init">
+    <list default="true" id="2c3b201d-aafd-4a52-9902-66b20a6a13f9" name="Changes" comment="init bdd">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/elements/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/elements/Button.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/elements/CheckBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/elements/CheckBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/elements/DropDown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/elements/DropDown.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/elements/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/elements/Input.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/AddMilestonePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/AddMilestonePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/AddTestCasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/AddTestCasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepsDefs/Hook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepsDefs/Hook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepsDefs/MilestonesStepDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepsDefs/MilestonesStepDef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepsDefs/TestCaseStepDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepsDefs/TestCaseStepDef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/milestone.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/milestone.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/testCases.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/testCases.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +85,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Read Milestone">
+  <component name="RunManager" selected="Cucumber Java.Feature: testCases">
     <configuration name="Feature: milestone" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/milestone.feature" />
@@ -84,6 +94,25 @@
       <module name="AQA27Onl" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
       <option name="SUGGESTED_NAME" value="Feature: milestone" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Feature: testCases" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/testCases.feature" />
+      <option name="GLUE" value="stepsDefs" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="AQA27Onl" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: testCases" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -115,26 +144,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Delete Milestone" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/milestone.feature" />
-      <option name="GLUE" value="stepsDefs" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="AQA27Onl" />
-      <option name="NAME_FILTER" value="^Delete Milestone$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Delete Milestone$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Delete Milestone" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Scenario: Read Milestone" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/milestone.feature" />
@@ -155,15 +164,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Update Milestone" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: create test case" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/milestone.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/testCases.feature" />
       <option name="GLUE" value="stepsDefs" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="AQA27Onl" />
-      <option name="NAME_FILTER" value="^Update Milestone$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Update Milestone$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Update Milestone" />
+      <option name="NAME_FILTER" value="^create test case$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^create test case$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: create test case" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -176,19 +185,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Cucumber Java.Scenario: Delete Milestone" />
-      <item itemvalue="Cucumber Java.Scenario: Update Milestone" />
+      <item itemvalue="Cucumber Java.Feature: testCases" />
+      <item itemvalue="Cucumber Java.Scenario: create test case" />
       <item itemvalue="Cucumber Java.Scenario: Create Milestone" />
       <item itemvalue="Cucumber Java.Scenario: Read Milestone" />
       <item itemvalue="Cucumber Java.Feature: milestone" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Feature: testCases" />
+        <item itemvalue="Cucumber Java.Scenario: create test case" />
         <item itemvalue="Cucumber Java.Scenario: Read Milestone" />
-        <item itemvalue="Cucumber Java.Feature: milestone" />
         <item itemvalue="Cucumber Java.Scenario: Create Milestone" />
-        <item itemvalue="Cucumber Java.Scenario: Update Milestone" />
-        <item itemvalue="Cucumber Java.Scenario: Delete Milestone" />
+        <item itemvalue="Cucumber Java.Feature: milestone" />
       </list>
     </recent_temporary>
   </component>
@@ -257,7 +266,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725028211389</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="init bdd">
+      <option name="closed" value="true" />
+      <created>1725031100917</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1725031100918</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -276,7 +293,8 @@
     <MESSAGE value="update" />
     <MESSAGE value="Correct" />
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="init bdd" />
+    <option name="LAST_COMMIT_MESSAGE" value="init bdd" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/AQA27$Feature__first.ic" NAME="Feature: first Coverage Results" MODIFIED="1724685512680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">

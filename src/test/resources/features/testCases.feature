@@ -7,3 +7,6 @@ Feature:
       Then Test Cases page is displayed
       When user clicks Add TestCase
       Then Add TestCase page is displayed
+      Then write "Title_AQA27"
+      * select Section Dropdown
+      * select Template Dropdown

@@ -29,8 +29,12 @@ Feature:
     Then  project page is displayed
     When user clicks Edit button
     Then Add Milestones page is displayed
-    * Read Name field
-
+    * name field has value 'AQA27'
+    * references field has value 'AQA'
+    * description field has value 'AQA27'
+    * start date field has value '9/1/2024'
+    * end date field has value '9/30/2024'
+    * is checkbox 'milestone completed' marked
 
   Scenario: Update Milestone
     Given open login page
@@ -49,7 +53,6 @@ Feature:
     * remove checkbox
     When user clicks Add Milestone Button
     Then milestones page is displayed
-
 
   Scenario: Delete Milestone
     Given open login page

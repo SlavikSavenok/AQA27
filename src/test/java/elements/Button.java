@@ -21,4 +21,8 @@ public class Button {
     public boolean isDisplayed() {
         return uiElement.isDisplayed();
     }
+
+    public String getAttribute(String value) {
+        return uiElement.getAttribute(value);
+    }
 }
