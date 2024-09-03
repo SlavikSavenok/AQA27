@@ -104,8 +104,9 @@ public class TestCaseStepDef extends BaseTest {
     }
 
     @Then("click Add Test Case button")
-    public void userClickAddTestCaseButton() {
+    public void userClickAddTestCaseButton() throws InterruptedException {
         addTestCasePage.clickAddTestCaseButton();
+        Thread.sleep(500);
     }
 
     @When("user clicks  Test Case TitleAQA27")
