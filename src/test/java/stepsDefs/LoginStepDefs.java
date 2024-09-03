@@ -2,8 +2,8 @@ package stepsDefs;
 
 import baseEntities.BaseTest;
 import configuration.ReadProperties;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
 import pages.DashboardPage;
@@ -45,7 +45,7 @@ public class LoginStepDefs extends BaseTest {
         clickLoginButton();
     }
 
-    @Then("dashboard page is displayed")
+    @And("dashboard page is displayed")
     public void isDashboardPageDisplayed() {
         Assert.assertTrue(new DashboardPage(driver).isPageOpened());
     }

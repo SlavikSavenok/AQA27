@@ -5,10 +5,10 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
-import pages.AddMilestonePage;
+import pages.Milestone.AddMilestonePage;
 import pages.DashboardPage;
-import pages.MilestonesPage;
-import pages.ProjectPage;
+import pages.Milestone.MilestonesPage;
+import pages.Project.ProjectPage;
 
 
 public class MilestonesStepDef extends BaseTest {

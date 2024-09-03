@@ -1,4 +1,4 @@
-package pages;
+package pages.Project;
 
 import baseEntities.BasePage;
 import elements.CheckBox;

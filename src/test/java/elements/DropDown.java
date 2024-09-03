@@ -3,6 +3,7 @@ package elements;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import services.WaitsService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +12,7 @@ public class DropDown {
     private UIElement uiElement;
     private UIElement actionElement;
     private UIElement optionsElement;
+    private WaitsService waitsService;
     private List<UIElement> optionList = new ArrayList<>();
     private List<String> textList = new ArrayList<>();
 
@@ -18,14 +20,16 @@ public class DropDown {
         this.uiElement = new UIElement(driver, by);
         this.actionElement = uiElement.findUIElement(By.className("chzn-single"));
         this.optionsElement = uiElement.findUIElement(By.cssSelector("[data-testid='compareVersionDropDwonButton']"));
+        waitsService = new WaitsService(driver);
 
     }
 
     private void openDropDown() {
         actionElement.click();
+        waitsService.waitVisibilityOf(optionsElement);
         for (WebElement webElement : uiElement.findUIElements(By.tagName("li"))) {
             optionList.add((UIElement) webElement);
-            for (WebElement webElement1 : optionsElement.findUIElements(By.tagName("li"))) ;
+            for (UIElement uiElement1 : optionsElement.findUIElements(By.tagName("li"))) ;
             textList.add(webElement.getText());
         }
     }
@@ -39,6 +43,10 @@ public class DropDown {
     public void selectByText(String text) {
         openDropDown();
         optionList.get(textList.indexOf(text)).click();
+    }
+
+    public String getText() {
+        return uiElement.getText();
     }
 }
 

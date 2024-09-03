@@ -5,8 +5,6 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import services.BrowsersService;
 
-import java.util.concurrent.TimeUnit;
-
 public class Hook extends BaseTest {
     private BaseTest baseTest;
 
@@ -19,8 +17,8 @@ public class Hook extends BaseTest {
         baseTest.driver = new BrowsersService().getDriver();
     }
 
-   /*@After
-    public void closeBrowser(){
+  /* @After
+    public void closeBrowser() {
         baseTest.driver.quit();
     }*/
 }

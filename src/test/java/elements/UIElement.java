@@ -20,6 +20,8 @@ public class UIElement implements WebElement {
     public UIElement(WebDriver driver, By by) {
         this(driver);
         webElement = waitsService.presenceOfElementLocated(by);
+        webElement=waitsService.elementToBeClickable(by);
+
     }
 
     public UIElement(WebDriver driver, WebElement webElement) {

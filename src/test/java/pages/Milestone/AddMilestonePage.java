@@ -1,4 +1,4 @@
-package pages;
+package pages.Milestone;
 
 import baseEntities.BasePage;
 import elements.Button;
