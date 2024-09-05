@@ -32,11 +32,15 @@ public class DropDown {
 
     public void selectByIndex(int index) {
         openDropDown();
-        optionList.get(index).click();
+        if (optionList.get(index).isDisplayed()) {
+            optionList.get(index).click();
+        }
     }
 
     public void selectByText(String text) {
         openDropDown();
-        optionList.get(textList.indexOf(text)).click();
+        if (optionList.get(textList.indexOf(text)).isDisplayed()) {
+            optionList.get(textList.indexOf(text)).click();
+        }
     }
 }
