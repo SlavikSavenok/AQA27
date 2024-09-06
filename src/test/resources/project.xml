@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project>
+    <projectName type="string">Project_AQA27</projectName>
+    <announcement type="string">Announcement_AQA27</announcement>
+    <isShowAnnouncement type="string">true</isShowAnnouncement>
+    <projectType type="int">2</projectType>
+    <isEnableApprovals type="boolean">false</isEnableApprovals>
+</project>
