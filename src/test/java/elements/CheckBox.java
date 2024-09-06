@@ -7,19 +7,22 @@ public class CheckBox {
     private final UIElement uiElement;
 
     public CheckBox(WebDriver driver, By by) {
-        this.uiElement = new UIElement(driver,by);
+        this.uiElement = new UIElement(driver, by);
+    }
+
+
+    private void setFlag(boolean flag) {
+        if (!uiElement.isSelected() && flag) {
+            uiElement.click();
+        }
     }
 
     public void setCheckBox() {
-        if (!uiElement.isSelected()) {
-            uiElement.click();
-        }
+        setFlag(true);
     }
 
     public void removeCheckBox() {
-        if (uiElement.isSelected()) {
-            uiElement.click();
-        }
+        setFlag(false);
     }
 }
 
