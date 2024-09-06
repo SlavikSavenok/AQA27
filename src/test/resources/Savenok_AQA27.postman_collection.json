@@ -1,0 +1,344 @@
+{
+	"info": {
+		"_postman_id": "6fa52386-b1e3-4f38-968d-3e810c9f6365",
+		"name": "Savenok_AQA27",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38100685"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get All Users",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Qwertyu_1",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "testrailaqa27@mail.ru",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_users",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Projects",
+			"item": [
+				{
+					"name": "Get All Projects",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Qwertyu_1",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "testrailaqa27@mail.ru",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_projects",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_projects",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add project",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Qwertyu_1",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "testrailaqa27@mail.ru",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Savenok_AQA27\",\r\n    \"announcement\": \"Welcome to project X\",\r\n    \"show_announcement\": true,\r\n    \"suite mode\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/add_project",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/add_project",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Project",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Qwertyu_1",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "testrailaqa27@mail.ru",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/get_project/10",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/get_project/10",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update project",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Qwertyu_1",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "testrailaqa27@mail.ru",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"AQA_27\",\r\n    \"announcement\": \"Happy Holidays Everyone!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php?/api/v2/update_project/10",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/update_project/10",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Project",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Qwertyu_1",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "testrailaqa27@mail.ru",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}index.php?/api/v2/delete_project/13",
+							"host": [
+								"{{base_url}}index",
+								"php"
+							],
+							"query": [
+								{
+									"key": "/api/v2/delete_project/13",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "basic",
+				"basic": [
+					{
+						"key": "password",
+						"value": "Qwertyu_1",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "testrailaqa27@mail.ru",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "Qwertyu_1",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "testrailaqa27@mail.ru",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
