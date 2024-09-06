@@ -1,15 +1,14 @@
-package test;
+package test.gui;
 
-import baseEntities.BaseTest;
+import baseEntities.BaseGuiTest;
 import configuration.ReadProperties;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-import io.qameta.allure.Step;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class LoginTest extends BaseTest {
+public class LoginGuiTest extends BaseGuiTest {
 
     @Test(description = "Тест на проверку логина")
     @Description("Тест проверяет вход под логином StandardUser")

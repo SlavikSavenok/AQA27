@@ -13,7 +13,7 @@ import steps.UserSteps;
 import utils.InvokedListener;
 
 @Listeners(InvokedListener.class)
-public class BaseTest {
+public class BaseGuiTest {
     protected WebDriver driver;
     protected UserSteps userSteps;
     protected AddRemoveSteps addRemoveSteps;
