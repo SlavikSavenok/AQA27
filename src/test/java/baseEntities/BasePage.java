@@ -12,7 +12,6 @@ public abstract class BasePage {
 
     protected abstract By getPageIdentifier();
 
-    public boolean isPageOpen() {
         return pageDriver.findElement(getPageIdentifier()).isDisplayed();
     }
 }

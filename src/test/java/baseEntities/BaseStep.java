@@ -6,19 +6,17 @@ import pages.*;
 public class BaseStep {
     protected WebDriver driver;
     protected LoginPage loginPage;
-    protected MenuPage menuPage;
-    protected CartPage cartPage;
-    protected CheckoutInformationPage checkoutInformationPage;
-    protected OverviewPage overviewPage;
-    protected CheckoutComplete checkoutComplete;
+    protected DashboardPage dashboardPage;
+    protected EditProjectPage editProjectPage;
+    protected TestCasesPage testCasesPage;
+    protected AddTestCasePage addTestCasePage;
 
     public BaseStep(WebDriver driver) {
         this.driver = driver;
+        editProjectPage = new EditProjectPage(driver);
         loginPage = new LoginPage(driver);
-        menuPage = new MenuPage(driver);
-        cartPage = new CartPage(driver);
-        overviewPage = new OverviewPage(driver);
-        checkoutComplete = new CheckoutComplete(driver);
-        checkoutInformationPage = new CheckoutInformationPage(driver);
+        dashboardPage = new DashboardPage(driver);
+        testCasesPage=new TestCasesPage(driver);
+        addTestCasePage=new AddTestCasePage(driver);
     }
 }
