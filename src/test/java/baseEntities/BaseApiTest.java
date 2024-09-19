@@ -5,12 +5,18 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import org.apache.http.protocol.HTTP;
 import org.testng.annotations.BeforeTest;
-import services.CaseService;
+import services.Case.CaseService;
+import services.Milestone.MilestonesService;
+import services.Project.ProjectService;
+import services.User.UserService;
 
 import static io.restassured.RestAssured.given;
 
 public class BaseApiTest {
     protected CaseService caseService;
+    protected ProjectService projectService;
+    protected UserService userService;
+    protected MilestonesService milestonesService;
 
 
     @BeforeTest
@@ -24,5 +30,8 @@ public class BaseApiTest {
                 .auth().preemptive().basic(ReadProperties.username(), ReadProperties.password());
 
         caseService = new CaseService();
+        projectService = new ProjectService();
+        userService = new UserService();
+        milestonesService=new MilestonesService();
     }
 }

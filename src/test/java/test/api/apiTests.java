@@ -2,6 +2,8 @@ package test.api;
 
 import baseEntities.BaseApiTest;
 import io.restassured.response.Response;
+import models.User;
+import models.Users;
 import org.apache.http.HttpStatus;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -72,5 +74,22 @@ public class apiTests extends BaseApiTest {
 
         System.out.println(name);
     }
-}
 
+    @Test
+    public void getAllUsersAsArray() {
+        Response response = userService.getUsers();
+        User[] users = response.getBody().jsonPath().getObject("users", User[].class);
+        System.out.println(users[0]);
+    }
+
+    @Test
+    public void getAllUsersAsObject() {
+        Response response = userService.getUsers();
+
+        Users users = response.getBody().as(Users.class);
+
+        System.out.println(users);
+        System.out.println(users.getUsers()[0]);
+    }
+
+}

@@ -1,16 +1,22 @@
 package models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.SerializedName;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 @Data
 public class Project {
+    @EqualsAndHashCode.Exclude
     private int id;
     private String name;
     private String announcement;
     @SerializedName(value = "show_announcement")
+    @JsonProperty("show_announcement")
     private boolean isShowAnnouncement;
-    @SerializedName(value ="suite_mode")
+
+    @SerializedName(value = "suite_mode")
+    @JsonProperty(value = "suite_mode")
     private int suiteMode;
 
 }
