@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Sep 26 18:21:56 GMT 2024","Thu Sep 26 18:21:57 GMT 2024","324","Main Suite","Smoke","test.LoginTestSmoke","test.LoginTestSmoke","loginTestVisualUser","Тест на проверку логина","Тест проверяет вход под логином VisualUser"
